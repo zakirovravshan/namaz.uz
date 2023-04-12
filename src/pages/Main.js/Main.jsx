@@ -17,6 +17,8 @@ const Main = () => {
 		setCurrentDateTime(currentDateTimeString);
 	};
 
+
+
 	const getData = () => {
 		axios
 			.get('https://islomapi.uz/api/present/day?region=Toshkent')
@@ -48,6 +50,7 @@ const Main = () => {
 				<main>
 					<section>
 						<div className='taqvim__wrapper'>
+							
 							<ul className='taqvim__list' >
 								<li className='taqvim__item'>
 									<p>Saharlik</p>
