@@ -27,10 +27,10 @@ const Main = () => {
 	useEffect(() => {
         getData();
 		updateCurrentDateTime();
-		const intervalId = setInterval(updateCurrentDateTime, 1000);
-		clearInterval(intervalId);
+		
 		
 	}, []);
+	setInterval(updateCurrentDateTime, 1000);
 
 	return (
 		<div className='wrapper'>

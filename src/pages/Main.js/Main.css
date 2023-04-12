@@ -31,11 +31,12 @@ img {
 }
 
 p {
-    color: teal;
+    color: #fff;
 }
 
 main {
     flex-grow: 1;
+    color: #008080;
 }
 
 .container {
@@ -58,10 +59,14 @@ main {
 
 .time {
     padding: 5px;
-    background-color: rgba(113, 103, 103, 0.317);
     border-radius: 10px;
     text-align: center;
     font-weight: 500;
+    background: rgba(0, 128, 128, 0.4);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.8px);
+    -webkit-backdrop-filter: blur(11.8px);
 }
 
 
@@ -83,12 +88,13 @@ main {
 
     flex-direction: column;
     border-radius: 20px;
-
-    background: rgba(1, 134, 143, 0);
+    gap: 20px;
+    /* From https://css.glass */
+    background: rgba(0, 128, 128, 0.4);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(7.7px);
-    -webkit-backdrop-filter: blur(7.7px);
+    backdrop-filter: blur(11.8px);
+    -webkit-backdrop-filter: blur(11.8px);
 }
 
 .taqvim__item {
@@ -96,6 +102,5 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 20px;
     font-weight: 500;
 }
