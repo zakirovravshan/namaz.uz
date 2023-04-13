@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Main.css';
 import axios from 'axios';
+import { Bar } from '../../components/Bar/Bar';
 
 const Main = () => {
 	const [currentDateTime, setCurrentDateTime] = useState('');
@@ -17,8 +18,6 @@ const Main = () => {
 		setCurrentDateTime(currentDateTimeString);
 	};
 
-
-
 	const getData = () => {
 		axios
 			.get('https://islomapi.uz/api/present/day?region=Toshkent')
@@ -27,10 +26,8 @@ const Main = () => {
 	};
 
 	useEffect(() => {
-        getData();
+		getData();
 		updateCurrentDateTime();
-		
-		
 	}, []);
 	setInterval(updateCurrentDateTime, 1000);
 
@@ -50,29 +47,28 @@ const Main = () => {
 				<main>
 					<section>
 						<div className='taqvim__wrapper'>
-							
-							<ul className='taqvim__list' >
+							<ul className='taqvim__list'>
 								<li className='taqvim__item'>
 									<p>Saharlik</p>
 									<p>{prayerTime.times?.tong_saharlik}</p>
 								</li>
-                                <li className='taqvim__item'>
+								<li className='taqvim__item'>
 									<p>Quyosh</p>
 									<p>{prayerTime.times?.quyosh}</p>
 								</li>
-                                <li className='taqvim__item'>
+								<li className='taqvim__item'>
 									<p>Peshin</p>
 									<p>{prayerTime.times?.peshin}</p>
 								</li>
-                                <li className='taqvim__item'>
+								<li className='taqvim__item'>
 									<p>Asr</p>
 									<p>{prayerTime.times?.asr}</p>
 								</li>
-                                <li className='taqvim__item'>
+								<li className='taqvim__item'>
 									<p>Shom</p>
 									<p>{prayerTime.times?.shom_iftor}</p>
 								</li>
-                                <li className='taqvim__item'>
+								<li className='taqvim__item'>
 									<p>Hufton</p>
 									<p>{prayerTime.times?.hufton}</p>
 								</li>
@@ -80,6 +76,7 @@ const Main = () => {
 						</div>
 					</section>
 				</main>
+				<Bar />
 			</div>
 		</div>
 	);
