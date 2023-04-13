@@ -1,18 +1,18 @@
 .bar {
     position: absolute;
-    bottom: 5px;
+    bottom: 10px;
     left: 0;
     right: 0;
-    background: rgba(0, 128, 128, 0.4);
+    background: rgba(1, 27, 27, 0.4);
     border-radius: 10px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(11.8px);
     -webkit-backdrop-filter: blur(11.8px);
-    padding: 20px;
+    padding: 30px;
     width: 100%;
     max-width: 360px;
     margin: 0 auto;
-    border-radius: 15px;
+    border-radius: 30px;
 }
 ul{
    
