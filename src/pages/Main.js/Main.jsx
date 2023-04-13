@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Main.css';
 import axios from 'axios';
-import { Bar } from '../../components/Bar/Bar';
 
 const Main = () => {
 	const [currentDateTime, setCurrentDateTime] = useState('');
@@ -49,34 +48,35 @@ const Main = () => {
 						<div className='taqvim__wrapper'>
 							<ul className='taqvim__list'>
 								<li className='taqvim__item'>
-									<p>Saharlik</p>
-									<p>{prayerTime.times?.tong_saharlik}</p>
+									<p className='taqvim__item__text'>Saharlik</p>
+									<p className='taqvim__item__text'>
+										{prayerTime.times?.tong_saharlik}
+									</p>
 								</li>
 								<li className='taqvim__item'>
-									<p>Quyosh</p>
-									<p>{prayerTime.times?.quyosh}</p>
+									<p className='taqvim__item__text'>Quyosh</p>
+									<p className='taqvim__item__text'>{prayerTime.times?.quyosh}</p>
 								</li>
 								<li className='taqvim__item'>
-									<p>Peshin</p>
-									<p>{prayerTime.times?.peshin}</p>
+									<p className='taqvim__item__text'>Peshin</p>
+									<p className='taqvim__item__text'>{prayerTime.times?.peshin}</p>
 								</li>
 								<li className='taqvim__item'>
-									<p>Asr</p>
-									<p>{prayerTime.times?.asr}</p>
+									<p className='taqvim__item__text'>Asr</p>
+									<p className='taqvim__item__text'>{prayerTime.times?.asr}</p>
 								</li>
 								<li className='taqvim__item'>
-									<p>Shom</p>
-									<p>{prayerTime.times?.shom_iftor}</p>
+									<p className='taqvim__item__text'>Shom</p>
+									<p className='taqvim__item__text'>{prayerTime.times?.shom_iftor}</p>
 								</li>
 								<li className='taqvim__item'>
-									<p>Hufton</p>
-									<p>{prayerTime.times?.hufton}</p>
+									<p className='taqvim__item__text'>Hufton</p>
+									<p className='taqvim__item__text'>{prayerTime.times?.hufton}</p>
 								</li>
 							</ul>
 						</div>
 					</section>
 				</main>
-				
 			</div>
 		</div>
 	);
