@@ -1,5 +1,5 @@
 .bar {
-    position: absolute;
+    position: fixed;
     bottom: 10px;
     left: 0;
     right: 0;
@@ -8,12 +8,25 @@
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(11.8px);
     -webkit-backdrop-filter: blur(11.8px);
-    padding: 30px;
+    padding: 10px 30px;
     width: 100%;
     max-width: 360px;
     margin: 0 auto;
     border-radius: 30px;
 }
-ul{
-   
+
+.bar__list{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bar__item{
+    width: 100%;
+    max-width: 65px;
+    padding: 10px;
+    border: 1px solid white;
+    background-color: #fff;
+    border-radius: 20px;
 }
