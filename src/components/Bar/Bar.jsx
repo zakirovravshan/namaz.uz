@@ -8,29 +8,29 @@ export const Bar = () => {
 		<div className='bar'>
 			<ul className='bar__list'>
 				<li className='bar__item'>
-					<Link to='/'>
-						{' '}
+					<Link className='link'  to='/'>
+						
 						<img src={tasbeh} alt='tasbeh' width={'50px'} />{' '}
 					</Link>
 				</li>
-				<li className='bar__item'>
-					<Link to='/'>
-						{' '}
+	 			<li className='bar__item'>
+					<Link  to='/settings'>
+						
 						<img src={tasbeh} alt='tasbeh' width={'50px'} />{' '}
 					</Link>
 				</li>
-				<li className='bar__item'>
-					<Link to='/'>
-						{' '}
+	 			<li className='bar__item'>
+					<Link  to='/'>
+						
 						<img src={tasbeh} alt='tasbeh' width={'50px'} />{' '}
 					</Link>
 				</li>
-				<li className='bar__item'>
-					<Link to='/'>
-						{' '}
+ 				<li className='bar__item'>
+					<Link  to='/'>
+						
 						<img src={tasbeh} alt='tasbeh' width={'50px'} />{' '}
 					</Link>
-				</li>
+				</li> 
 			</ul>
 		</div>
 	);

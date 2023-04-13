@@ -19,13 +19,9 @@ body {
     margin: 0;
     background-image: url("../../assets/images/bg.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     background-position: bottom bottom;
-    /* From https://css.glass */
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(11.5px);
-    -webkit-backdrop-filter: blur(11.5px);
+
 }
 
 img {
@@ -76,6 +72,9 @@ main {
 
 
 
+a {
+    -webkit-tap-highlight-color: transparent; /* remove tap highlight */
+}
 
 .header {
     margin-top: 10px;
@@ -93,7 +92,7 @@ main {
     flex-wrap: wrap;
     border-radius: 20px;
     gap: 20px;
-    /* From https://css.glass */
+
    
 }
 
@@ -112,6 +111,6 @@ main {
     background-repeat: no-repeat;
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(11.8px);
-    -webkit-backdrop-filter: blur(11.8px);
+    /* backdrop-filter: blur(11.8px);
+    -webkit-backdrop-filter: blur(11.8px); */
 }

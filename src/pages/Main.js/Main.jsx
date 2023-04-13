@@ -76,7 +76,7 @@ const Main = () => {
 						</div>
 					</section>
 				</main>
-				<Bar />
+				
 			</div>
 		</div>
 	);
