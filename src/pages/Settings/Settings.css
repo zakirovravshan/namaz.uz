@@ -1,0 +1,33 @@
+.wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.tasbeh__button {
+    position: absolute;
+    bottom: 120px;
+    width: 80%;
+    height: 200px;
+    border-radius: 30px;
+    font-size: 16px;
+    border: 1px dashed rgba(255, 255, 255, 0.644);
+    background-color: transparent;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    ;
+}
+
+.tasbeh__display{
+    text-align: center;
+    width: 120px;
+    padding: 20px ;
+    background-color: #ffffff;
+    border-radius: 16px;
+    margin-bottom: 160px;
+    color: blue;
+    font-weight: 700;
+    font-size: 36px;
+}

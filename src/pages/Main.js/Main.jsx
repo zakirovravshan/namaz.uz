@@ -23,7 +23,6 @@ const Main = () => {
 			.then((res) => {
 				setPrayerTime(res.data)
 			}
-			
 			)
 			.catch((error) => console.log(error));
 	};
