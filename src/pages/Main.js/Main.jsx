@@ -42,7 +42,7 @@ const Main = () => {
 	return (
 		<div className='wrapper'>
 			<div className='container'>
-				<header className='header'>
+			<header className='header'>
 					<div className='dates'>
 						<p>{prayTime.weekday}</p>
 						<p>{prayTime.date}</p>
