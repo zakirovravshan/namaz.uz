@@ -4,13 +4,14 @@ import { useState } from 'react';
 import redo from '../../assets/icons/redo.png';
 
 const Settings = () => {
-	var [counter, setCounter] = useState(0);
+	var [counter, setCounter] = useState(localStorage.getItem('counter'));
 
 	var handleCount = () => {
-		setCounter(counter + 1);
-		// if (counter === 33) {
-		// 	setCounter(0);
-		// }
+		localStorage.setItem('counter', counter);
+		var number = JSON.parse(localStorage.getItem('counter'));
+		var sum = number + 1;
+		localStorage.setItem('counter', sum);
+		setCounter(localStorage.getItem('counter'));
 	};
 
 	return (
@@ -18,7 +19,7 @@ const Settings = () => {
 			<div className='wrapper'>
 				<p className='tasbeh__display'>{counter}</p>
 				<button className='tasbeh__button' onClick={() => handleCount()}>
-					Sanoq uchun shu yerga bosing
+					Sanoq uchun shu yerni bosing
 				</button>
 				<button onClick={() => setCounter(0)} className='reset__button'>
 					<img src={redo} alt='redo' width={'40px'} />
