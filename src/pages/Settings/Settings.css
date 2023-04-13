@@ -24,10 +24,18 @@
     text-align: center;
     width: 120px;
     padding: 20px ;
-    background-color: #ffffff;
+    background-color: #fffffff2;
     border-radius: 16px;
     margin-bottom: 160px;
-    color: blue;
+    color:#0b2153;
     font-weight: 700;
     font-size: 36px;
+}
+
+.reset__button{
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    background-color: transparent;
+    border: none;
 }
