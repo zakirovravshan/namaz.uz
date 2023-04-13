@@ -101,14 +101,15 @@ main {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 25px 15px;
+    padding: 30px 15px;
     width: 100%;
-    max-width: 120px;
+    max-width: 135px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-weight: 500;
-    background: rgba(0, 128, 128, 0.4);
+    background-image: url("../../assets/images/1.jpg");
+    background-repeat: no-repeat;
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(11.8px);
