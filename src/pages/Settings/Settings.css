@@ -6,6 +6,10 @@
     flex-direction: column;
 }
 
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
 .tasbeh__button {
     position: absolute;
     bottom: 120px;
@@ -20,22 +24,33 @@
     ;
 }
 
-.tasbeh__display{
+.tasbeh__display {
     text-align: center;
-    width: 120px;
-    padding: 20px ;
-    background-color: #fffffff2;
+    width: 150px;
+    padding: 20px;
     border-radius: 16px;
     margin-bottom: 160px;
-    color:#0b2153;
+    color: #fdfeff;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 72px;
 }
 
-.reset__button{
+.reset__button {
+    padding: 8px 12px;
+    color: #fff;
     position: absolute;
     top: 20px;
-    left: 40px;
-    background-color: transparent;
+    left: 25px;
+    background: rgba(181, 185, 185, 0.4);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(197, 189, 189, 0.1);
+    backdrop-filter: blur(11.8px);
+    -webkit-backdrop-filter: blur(11.8px);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 105px;
     border: none;
 }

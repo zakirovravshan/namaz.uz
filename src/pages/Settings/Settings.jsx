@@ -21,8 +21,13 @@ const Settings = () => {
 				<button className='tasbeh__button' onClick={() => handleCount()}>
 					Sanoq uchun shu yerni bosing
 				</button>
-				<button onClick={() => setCounter(0)} className='reset__button'>
-					<img src={redo} alt='redo' width={'40px'} />
+				<button
+					onClick={() => {
+						setCounter(0);
+						localStorage.setItem('counter', 0);
+					}}
+					className='reset__button'>
+					Reset All <img src={redo} alt='redo' width={'20px'} />
 				</button>
 			</div>
 		</div>
