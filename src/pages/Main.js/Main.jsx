@@ -4,9 +4,7 @@ import axios from 'axios';
 
 const Main = () => {
 	const [currentDateTime, setCurrentDateTime] = useState('');
-	const [prayerTime, setPrayerTime] = useState(
-		JSON.parse(localStorage.getItem('prayerTime')),
-	);
+	const [prayerTime, setPrayerTime] = useState(JSON.parse(localStorage.getItem('prayerTime')));
 
 	// Function to update the current date and time
 	const updateCurrentDateTime = () => {
@@ -23,15 +21,12 @@ const Main = () => {
 		axios
 			.get('https://islomapi.uz/api/present/day?region=Toshkent')
 			.then((res) => {
-				setPrayerTime(res.data);
 				localStorage.setItem('prayerTime', JSON.stringify(res.data));
+				setPrayerTime(JSON.parse(localStorage.getItem('prayerTime')));
 			})
 			.catch((error) => console.log(error));
-
 	};
-
 	
-
 	useEffect(() => {
 		getData();
 		updateCurrentDateTime();
@@ -43,11 +38,11 @@ const Main = () => {
 			<div className='container'>
 				<header className='header'>
 					<div className='dates'>
-						<p>{prayerTime.weekday}</p>
-						<p>{prayerTime.date}</p>
+						<p>{prayerTime?.weekday}</p>
+						<p>{prayerTime?.date}</p>
 					</div>
 					<div className='city'>
-						<p> {prayerTime.region}</p>
+						<p> {prayerTime?.region}</p>
 						<p className='time'>{currentDateTime}</p>
 					</div>
 				</header>
@@ -57,37 +52,37 @@ const Main = () => {
 							<ul className='taqvim__list'>
 								<li className='taqvim__item'>
 									<p className='taqvim__item__text__time'>
-										{prayerTime.times?.tong_saharlik}
+										{prayerTime?.times?.tong_saharlik}
 									</p>
 									<p className='taqvim__item__text'>Saharlik</p>
 								</li>
 								<li className='taqvim__item'>
 									<p className='taqvim__item__text__time'>
-										{prayerTime.times?.quyosh}
+										{prayerTime?.times?.quyosh}
 									</p>
 									<p className='taqvim__item__text'>Quyosh</p>
 								</li>
 								<li className='taqvim__item'>
 									<p className='taqvim__item__text__time'>
-										{prayerTime.times?.peshin}
+										{prayerTime?.times?.peshin}
 									</p>
 									<p className='taqvim__item__text'>Peshin</p>
 								</li>
 								<li className='taqvim__item'>
 									<p className='taqvim__item__text__time'>
-										{prayerTime.times?.asr}
+										{prayerTime?.times?.asr}
 									</p>
 									<p className='taqvim__item__text'>Asr</p>
 								</li>
 								<li className='taqvim__item'>
 									<p className='taqvim__item__text__time'>
-										{prayerTime.times?.shom_iftor}
+										{prayerTime?.times?.shom_iftor}
 									</p>
 									<p className='taqvim__item__text'>Shom</p>
 								</li>
 								<li className='taqvim__item'>
 									<p className='taqvim__item__text__time'>
-										{prayerTime.times?.hufton}
+										{prayerTime?.times?.hufton}
 									</p>
 									<p className='taqvim__item__text'>Hufton</p>
 								</li>
