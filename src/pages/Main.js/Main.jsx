@@ -48,30 +48,30 @@ const Main = () => {
 						<div className='taqvim__wrapper'>
 							<ul className='taqvim__list'>
 								<li className='taqvim__item'>
-									<p className='taqvim__item__text'>Saharlik</p>
-									<p className='taqvim__item__text'>
+									<p className='taqvim__item__text__time'>
 										{prayerTime.times?.tong_saharlik}
 									</p>
+									<p className='taqvim__item__text'>Saharlik</p>
 								</li>
 								<li className='taqvim__item'>
+									<p className='taqvim__item__text__time'>{prayerTime.times?.quyosh}</p>
 									<p className='taqvim__item__text'>Quyosh</p>
-									<p className='taqvim__item__text'>{prayerTime.times?.quyosh}</p>
 								</li>
 								<li className='taqvim__item'>
+									<p className='taqvim__item__text__time'>{prayerTime.times?.peshin}</p>
 									<p className='taqvim__item__text'>Peshin</p>
-									<p className='taqvim__item__text'>{prayerTime.times?.peshin}</p>
 								</li>
 								<li className='taqvim__item'>
+									<p className='taqvim__item__text__time'>{prayerTime.times?.asr}</p>
 									<p className='taqvim__item__text'>Asr</p>
-									<p className='taqvim__item__text'>{prayerTime.times?.asr}</p>
 								</li>
 								<li className='taqvim__item'>
+									<p className='taqvim__item__text__time'>{prayerTime.times?.shom_iftor}</p>
 									<p className='taqvim__item__text'>Shom</p>
-									<p className='taqvim__item__text'>{prayerTime.times?.shom_iftor}</p>
 								</li>
 								<li className='taqvim__item'>
+									<p className='taqvim__item__text__time'>{prayerTime.times?.hufton}</p>
 									<p className='taqvim__item__text'>Hufton</p>
-									<p className='taqvim__item__text'>{prayerTime.times?.hufton}</p>
 								</li>
 							</ul>
 						</div>
