@@ -12,16 +12,18 @@ body {
 }
 
 .tasbeh__button {
+    padding: 5px;
     position: absolute;
-    bottom: 120px;
+    bottom: 135px;
     width: 100%;
-    max-width: 200px;
+    max-width: 270px;
     height: 200px;
     border-radius: 30px;
     font-size: 16px;
-    border: 1px dashed #fff;
-    background-color: #46aa9e;
+    border: 1px dashed #46aa9e;
+    background-color: transparent;
     color: #fff;
+   
     font-family: 'Poppins', sans-serif;
     ;
 }
@@ -41,7 +43,7 @@ body {
     padding: 8px 12px;
     color: #fff;
     position: absolute;
-    top: 10px;
+    top: 15px;
     left:15px;
     background: rgba(255, 255, 255, 0.653);
     border-radius: 10px;
@@ -53,11 +55,16 @@ body {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 40px;
+    max-width: 120px;
     border: none;
     color: teal;
     font-weight: 600;
     z-index: 999;
+}
+
+.tasbeh__33{
+    margin-bottom: 8px;
+    border-bottom: 2px dotted #46aa9e;
 }
 
 .modal__button {
@@ -82,11 +89,27 @@ body {
     font-weight: 600;
     
 }
-.big__box{
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
+
 .box{
     width: 60px;
+}
+
+
+.slick-dots li {
+    margin: 0 0.25rem;
+    position: absolute;
+    bottom: 133px;
+    width: 10px;
+}
+.uz{
+    font-size: 10px;
+     color: #46aa9e;
+}
+.ar_uz{
+    font-size: 10px;
+     color: #46aa9e;
+}
+.ar{
+    font-size: 24px;
+     color: #c59147;
 }
