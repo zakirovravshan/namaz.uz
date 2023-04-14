@@ -31,7 +31,7 @@
     max-width: 65px;
     padding: 19px 7px;
     border: 1px solid transparent;
-    background-color: #ffffffc6;
+    background-color: #58d6d6b0;
     border-radius: 20px;
     transition: all 0.3s ease;
 }
@@ -41,7 +41,7 @@
     max-width: 65px;
     padding: 19px 7px;
     border: 1px solid transparent;
-    background-color: rgba(88, 214, 214, 0.692);
+    background-color: #c59147;
     border-radius: 20px;
     transition: all 0.3s ease;
 }

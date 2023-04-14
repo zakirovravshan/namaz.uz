@@ -87,7 +87,7 @@ a {
     /* remove tap highlight */
 }
 
-button{
+button {
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -99,7 +99,7 @@ button{
 }
 
 .taqvim__list {
-   
+
     padding: 20px;
     display: flex;
     align-items: center;
@@ -112,6 +112,15 @@ button{
     margin-top: 100px;
 
 
+}
+
+p {
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
 }
 
 .taqvim__item {

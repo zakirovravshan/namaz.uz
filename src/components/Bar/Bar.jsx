@@ -1,7 +1,10 @@
 import React from 'react';
 import './Bar.css';
 import { NavLink } from 'react-router-dom';
-import tasbeh from '../../assets/icons/tasbeh.png';
+import tasbeh from '../../assets/icons/tasbih.png';
+import pray from '../../assets/icons/time.png';
+import qibla from '../../assets/icons/qibla.png';
+import app from '../../assets/icons/application.png';
 
 export const Bar = () => {
 	return (
@@ -15,7 +18,7 @@ export const Bar = () => {
 						}
 						
 						>
-						<img src={tasbeh} alt='tasbeh' width={'50px'} />{' '}
+						<img src={pray} alt='tasbeh' width={'50px'} />{' '}
 					</NavLink>
 				</li>
 				<li className='bar__item'>
@@ -26,7 +29,7 @@ export const Bar = () => {
 						}
 						
 						>
-						<img src={tasbeh} alt='tasbeh' width={'50px'} />{' '}
+						<img src={tasbeh} alt='pray icon' width={'50px'} />{' '}
 					</NavLink>
 				</li>
 				<li className='bar__item'>
@@ -37,7 +40,7 @@ export const Bar = () => {
 						}
 						
 						>
-						<img src={tasbeh} alt='tasbeh' width={'50px'} />{' '}
+						<img src={qibla} alt='qibla' width={'50px'} />{' '}
 					</NavLink>
 				</li>
 				<li className='bar__item'>
@@ -48,7 +51,7 @@ export const Bar = () => {
 						}
 						
 						>
-						<img src={tasbeh} alt='tasbeh' width={'50px'} />{' '}
+						<img src={app} alt='application' width={'50px'} />{' '}
 					</NavLink>
 				</li>
 			</ul>
