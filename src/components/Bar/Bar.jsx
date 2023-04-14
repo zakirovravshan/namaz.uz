@@ -34,7 +34,7 @@ export const Bar = () => {
 				</li>
 				<li className='bar__item'>
 				<NavLink
-						to='/s'
+						to='/qibla'
 						className={({ isActive, isPending }) =>
 							isPending ? 'link' : isActive ? 'activebar' : "link"
 						}
