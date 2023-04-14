@@ -149,13 +149,15 @@ const Settings = () => {
 							className='tasbeh__button'
 							onClick={() => handleCount1()}>
 							<p className='ar'>سُبْحَانَ اللهِ</p>
-							<p className='tasbeh__33 ar_uz '>Subhanalloh </p>
+							<p className=' ar_uz '>Subhanalloh </p>
 
-							<p className='ar'> ٱلْحَمْدُ لِلَّٰهِ</p>
-							<p className='tasbeh__33 ar_uz'>Alhamdulillah </p>
+							<div className='tasbeh__33'>
+								<p className='ar'> ٱلْحَمْدُ لِلَّٰهِ</p>
+								<p className=' ar_uz'>Alhamdulillah </p>
+							</div>
 
 							<p className='ar'> الله أكب</p>
-							<p className='tasbeh__33 ar_uz'>Allahu Akbar </p>
+							<p className=' ar_uz'>Allahu Akbar </p>
 						</motion.button>
 					</div>
 				</div>

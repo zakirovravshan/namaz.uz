@@ -69,8 +69,11 @@ body {
 }
 
 .tasbeh__33 {
+    padding: 6px 0;
     margin-bottom: 8px;
+    margin-top: 8px;
     border-bottom: 2px dotted #46aa9e;
+    border-top: 2px dotted #46aa9e;
 }
 
 .modal__button {
