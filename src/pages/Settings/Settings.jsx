@@ -99,6 +99,7 @@ const Settings = () => {
 		centerMode: true,
 		centerPadding: '80px',
 		slidesToShow: 1,
+		arrows: false,
 		responsive: [
 			{
 				breakpoint: 768,
@@ -121,7 +122,7 @@ const Settings = () => {
 		],
 	};
 	return (
-		<div>
+		<div className='tasbeh__main'>
 			<button
 				onClick={() => {
 					setCounter(0);
@@ -147,7 +148,7 @@ const Settings = () => {
 							transition={{ type: 'spring', stiffness: 400, damping: 17 }}
 							className='tasbeh__button'
 							onClick={() => handleCount1()}>
-							<p className='ar' >سُبْحَانَ اللهِ</p>
+							<p className='ar'>سُبْحَانَ اللهِ</p>
 							<p className='tasbeh__33 ar_uz '>Subhanalloh </p>
 
 							<p className='ar'> ٱلْحَمْدُ لِلَّٰهِ</p>
@@ -171,7 +172,6 @@ const Settings = () => {
 								Allahumma Salli Ala Muhammad Waala Ali Muhammad{' '}
 							</p>
 							<p className='ar'>
-								
 								ٱللَّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَعَلَىٰ آلِ مُحَمَّدٍ
 							</p>
 							<p className='uz'>
@@ -194,7 +194,6 @@ const Settings = () => {
 								Subhanallohi va bihamdihi subhanallohil aziym{' '}
 							</p>
 							<p className='ar'>
-								
 								سُبْحَانَ اللَّهِ وَبِحَمْدِهِ، سُبْحَانَ اللَّهِ العَظِيم
 							</p>
 							<p className='uz'>
@@ -216,7 +215,6 @@ const Settings = () => {
 								La ilaha illa anta subẍanaka inni kuntu mina-ӟ-alimin
 							</p>
 							<p className='ar'>
-								
 								لاَّ إِلَـهَ إِلاَّ أَنتَ سُبْحَـنَكَ إِنِّى كُنتُ مِنَ
 								الظَّـلِمِينَ
 							</p>
