@@ -1,6 +1,6 @@
 import React from 'react';
 import './Bar.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import tasbeh from '../../assets/icons/tasbeh.png';
 
 export const Bar = () => {
@@ -8,29 +8,49 @@ export const Bar = () => {
 		<div className='bar'>
 			<ul className='bar__list'>
 				<li className='bar__item'>
-					<Link className='link'  to='/'>
+					<NavLink
+						to='/'
+						className={({ isActive, isPending }) =>
+							isPending ? 'link' : isActive ? 'activebar' : "link"
+						}
 						
+						>
 						<img src={tasbeh} alt='tasbeh' width={'50px'} />{' '}
-					</Link>
+					</NavLink>
 				</li>
-	 			<li className='bar__item'>
-					<Link  to='/settings'>
+				<li className='bar__item'>
+				<NavLink
+						to='/settings'
+						className={({ isActive, isPending }) =>
+							isPending ? 'link' : isActive ? 'activebar' : "link"
+						}
 						
+						>
 						<img src={tasbeh} alt='tasbeh' width={'50px'} />{' '}
-					</Link>
+					</NavLink>
 				</li>
-	 			<li className='bar__item'>
-					<Link  to='/'>
+				<li className='bar__item'>
+				<NavLink
+						to='/s'
+						className={({ isActive, isPending }) =>
+							isPending ? 'link' : isActive ? 'activebar' : "link"
+						}
 						
+						>
 						<img src={tasbeh} alt='tasbeh' width={'50px'} />{' '}
-					</Link>
+					</NavLink>
 				</li>
- 				<li className='bar__item'>
-					<Link  to='/'>
+				<li className='bar__item'>
+				<NavLink
+						to='/b'
+						className={({ isActive, isPending }) =>
+							isPending ? 'link' : isActive ? 'activebar' : "link"
+						}
 						
+						>
 						<img src={tasbeh} alt='tasbeh' width={'50px'} />{' '}
-					</Link>
-				</li> 
+					</NavLink>
+				</li>
 			</ul>
 		</div>
 	);

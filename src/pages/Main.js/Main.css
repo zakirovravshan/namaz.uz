@@ -17,12 +17,16 @@ body {
     flex-direction: column;
     height: 100%;
     margin: 0;
-    background-color: #371e58;
+    background-color: #DADBDD;
     background-image: url("../../assets/images/bg.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: bottom bottom;
-    
+    background-position:
+        calc(50% - 0%)
+        /* 0px from the right */
+        calc(50% - 20px)
+        /* 10% from the bottom */
+
 
 
 }
@@ -41,7 +45,7 @@ p {
 main {
     flex-grow: 1;
     color: #008080;
-   
+
 }
 
 .container {
@@ -55,10 +59,12 @@ main {
 
 .dates {
     text-align: start;
+    font-weight: 600;
 
 }
 
 .city {
+    font-weight: 600;
     text-align: end;
 }
 
@@ -67,7 +73,7 @@ main {
     border-radius: 10px;
     text-align: center;
     font-weight: 500;
-    background: rgba(0, 128, 128, 0.4);
+    background: rgba(2, 48, 48, 0.511);
     border-radius: 10px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(11.8px);
@@ -89,14 +95,17 @@ a {
 }
 
 .taqvim__list {
-    margin-top: 30px;
+   
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     border-radius: 20px;
-    gap: 20px;
+    max-width: 320px;
+    gap: 15px;
+    margin: 0 auto;
+    margin-top: 70px;
 
 
 }
@@ -107,7 +116,7 @@ a {
     flex-direction: column;
     padding: 30px 15px;
     width: 100%;
-    max-width: 135px;
+    max-width: 125px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -192,6 +201,9 @@ a {
     background-color: rgba(45, 50, 104, 0.61);
     /* Поднимаем слой на передний план */
     border-radius: 16px;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    z-index: 1;
 
 
 }
@@ -219,6 +231,9 @@ a {
     z-index: 1;
     /* Поднимаем слой на передний план */
     border-radius: 16px;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    z-index: 1;
 
 
 }
@@ -246,6 +261,9 @@ a {
     background-color: rgba(45, 50, 104, 0.61);
     /* Поднимаем слой на передний план */
     border-radius: 16px;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    z-index: 1;
 
 
 }
@@ -273,6 +291,9 @@ a {
     background-color: rgba(45, 50, 104, 0.61);
     /* Поднимаем слой на передний план */
     border-radius: 16px;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    z-index: 1;
 
 
 }
@@ -299,7 +320,9 @@ a {
     background-color: rgba(45, 50, 104, 0.61);
     /* Поднимаем слой на передний план */
     border-radius: 16px;
-   
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    z-index: 1;
 
 
 }
@@ -350,6 +373,7 @@ a {
     z-index: 3;
 
 }
+
 .taqvim__item__text__time {
     z-index: 3;
     font-size: 24px;

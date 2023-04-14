@@ -17,7 +17,7 @@ body {
     height: 200px;
     border-radius: 30px;
     font-size: 16px;
-    border: 1px dashed rgba(255, 255, 255, 0.644);
+    border: 1px dashed teal;
     background-color: transparent;
     color: #fff;
     font-family: 'Poppins', sans-serif;
@@ -30,7 +30,7 @@ body {
     padding: 20px;
     border-radius: 16px;
     margin-bottom: 160px;
-    color: #fdfeff;
+    color: teal;
     font-weight: 700;
     font-size: 72px;
 }
@@ -41,7 +41,7 @@ body {
     position: absolute;
     top: 20px;
     left: 25px;
-    background: rgba(181, 185, 185, 0.4);
+    background: rgba(255, 255, 255, 0.653);
     border-radius: 10px;
     box-shadow: 0 4px 30px rgba(197, 189, 189, 0.1);
     backdrop-filter: blur(11.8px);
@@ -53,4 +53,6 @@ body {
     width: 100%;
     max-width: 105px;
     border: none;
+    color: teal;
+    font-weight: 600;
 }

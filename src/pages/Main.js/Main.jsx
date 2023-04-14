@@ -9,26 +9,6 @@ const Main = () => {
 		JSON.parse(localStorage.getItem('prayerTime')),
 	);
 
-	const fcontainer = {
-		hidden: { opacity: 1, scale: 0 },
-		visible: {
-			opacity: 1,
-			scale: 1,
-			transition: {
-				delayChildren: 0.1,
-				staggerChildren: 0.1,
-			},
-		},
-	};
-
-	const item = {
-		hidden: { y: 20, opacity: 0 },
-		visible: {
-			y: 0,
-			opacity: 1,
-		},
-	};
-
 	// Function to update the current date and time
 	const updateCurrentDateTime = () => {
 		const currentDate = new Date();
@@ -72,48 +52,92 @@ const Main = () => {
 				<main>
 					<section>
 						<div className='taqvim__wrapper'>
-							<motion.ul
-								className='fcontainer taqvim__list'
-								variants={fcontainer}
-								initial='hidden'
-								animate='visible'>
-								<motion.li className='item taqvim__item' variants={item}>
+							<ul className='taqvim__list'>
+								<motion.li
+									className='taqvim__item'
+									initial={{ opacity: 0, scale: 0.5 }}
+									animate={{ opacity: 1, scale: 1 }}
+									transition={{
+										duration: 1,
+										delay: 0.1,
+										ease: [0, 1, 0.2, 1.01],
+									}}>
 									<p className='taqvim__item__text__time'>
 										{prayerTime?.times?.tong_saharlik}
 									</p>
 									<p className='taqvim__item__text'>Saharlik</p>
 								</motion.li>
-								<motion.li className='item taqvim__item' variants={item}>
+								<motion.li
+									className='taqvim__item'
+									initial={{ opacity: 0, scale: 0.5 }}
+									animate={{ opacity: 1, scale: 1 }}
+									transition={{
+										duration: 1,
+										delay: 0.1,
+										ease: [0, 1, 0.2, 1.01],
+									}}>
 									<p className='taqvim__item__text__time'>
 										{prayerTime?.times?.quyosh}
 									</p>
 									<p className='taqvim__item__text'>Quyosh</p>
 								</motion.li>
-								<motion.li className='item taqvim__item' variants={item}>
+								<motion.li
+									className='taqvim__item'
+									initial={{ opacity: 0, scale: 0.5 }}
+									animate={{ opacity: 1, scale: 1 }}
+									transition={{
+										duration: 1,
+										delay: 0.1,
+										ease: [0, 1, 0.2, 1.01],
+									}}>
 									<p className='taqvim__item__text__time'>
 										{prayerTime?.times?.peshin}
 									</p>
 									<p className='taqvim__item__text'>Peshin</p>
 								</motion.li>
-								<motion.li className='item taqvim__item' variants={item}>
+								<motion.li
+									className='taqvim__item'
+									initial={{ opacity: 0, scale: 0.5 }}
+									animate={{ opacity: 1, scale: 1 }}
+									transition={{
+										duration: 1,
+										delay: 0.1,
+										ease: [0, 1, 0.2, 1.01],
+									}}>
 									<p className='taqvim__item__text__time'>
 										{prayerTime?.times?.asr}
 									</p>
 									<p className='taqvim__item__text'>Asr</p>
 								</motion.li>
-								<motion.li className='item taqvim__item' variants={item}>
+								<motion.li
+									className='taqvim__item'
+									initial={{ opacity: 0, scale: 0.5 }}
+									animate={{ opacity: 1, scale: 1 }}
+									transition={{
+										duration: 1,
+										delay: 0.1,
+										ease: [0, 1, 0.2, 1.01],
+									}}>
 									<p className='taqvim__item__text__time'>
 										{prayerTime?.times?.shom_iftor}
 									</p>
 									<p className='taqvim__item__text'>Shom</p>
 								</motion.li>
-								<motion.li className='item taqvim__item' variants={item}>
+								<motion.li
+									className='taqvim__item'
+									initial={{ opacity: 0, scale: 0.5 }}
+									animate={{ opacity: 1, scale: 1 }}
+									transition={{
+										duration: 1,
+										delay: 0.1,
+										ease: [0, 1, 0.2, 1.01],
+									}}>
 									<p className='taqvim__item__text__time'>
 										{prayerTime?.times?.hufton}
 									</p>
 									<p className='taqvim__item__text'>Hufton</p>
 								</motion.li>
-							</motion.ul>
+							</ul>
 						</div>
 					</section>
 				</main>
