@@ -2,6 +2,7 @@ import React from 'react';
 import './Settings.css';
 import { useState } from 'react';
 import redo from '../../assets/icons/redo.png';
+import { motion } from 'framer-motion';
 
 const Settings = () => {
 	var [counter, setCounter] = useState(localStorage.getItem('counter'));
@@ -18,9 +19,15 @@ const Settings = () => {
 		<div>
 			<div className='wrapper'>
 				<p className='tasbeh__display'>{counter}</p>
-				<button className='tasbeh__button' onClick={() => handleCount()}>
+				<motion.button
+					
+					whileHover={{ scale: 1 }}
+					whileTap={{ scale: 0.98 }}
+					transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+					className='tasbeh__button'
+					onClick={() => handleCount()}>
 					Sanoq uchun shu yerni bosing
-				</button>
+				</motion.button>
 				<button
 					onClick={() => {
 						setCounter(0);
