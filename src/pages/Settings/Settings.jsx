@@ -19,7 +19,7 @@ const Settings = () => {
 
 	var handleCount1 = () => {
 		if (counter == 0) {
-			toast.success('Subhanalloh 33ta', {
+			toast.success('Subhanalloh 33taa', {
 				duration: 8000,
 			});
 		}
@@ -36,7 +36,7 @@ const Settings = () => {
 
 		if ('vibrate' in navigator) {
 			// Trigger the vibration for 200ms
-			navigator.vibrate(200);
+			navigator.vibrate(400);
 		} else {
 			console.log('Vibration not supported in this device.');
 		}
