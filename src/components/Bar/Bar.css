@@ -28,26 +28,31 @@
 
 .link {
     display: block;
-    width: 60px;
-    height: 60px;
-    padding: 10px;
+    width: 65px;
+    height: 65px;
+    padding: 12px;
 
     background-color: transparent;
     border-radius: 20px;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    text-align: center  ;
 
 }
 
 .activebar {
     display: block;
-    width: 60px;
-    height: 60px;
-    padding: 10px;
+    width: 65px;
+    height: 65px;
+    padding: 12px;
     border-radius: 20px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    text-align: center  ;
+
     background: rgba(255, 255, 255, 0.22);
     border-radius: 16px;
     transition: all 0.3s ease;

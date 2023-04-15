@@ -43,7 +43,7 @@ export const Bar = () => {
 						className={({ isActive, isPending }) =>
 							isPending ? 'link' : isActive ? 'activebar' : 'link'
 						}>
-						<img src={app} alt='application' width={'50px'} />{' '}
+						<img src={app} alt='application' width={'35px'} />{' '}
 					</NavLink>
 				</li>
 			</ul>

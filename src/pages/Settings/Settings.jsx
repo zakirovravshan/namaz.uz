@@ -20,7 +20,7 @@ const Settings = () => {
 	var handleCount1 = () => {
 		if ('vibrate' in navigator) {
 			// Trigger the vibration for 200ms
-			navigator.vibrate(20);
+			navigator.vibrate(50);
 		} else {
 			console.log('Vibration not supported in this device.');
 		}
@@ -32,7 +32,7 @@ const Settings = () => {
 		if (counter == 32) {
 			if ('vibrate' in navigator) {
 				// Trigger the vibration for 200ms
-				navigator.vibrate(200);
+				navigator.vibrate(150);
 			} else {
 				console.log('Vibration not supported in this device.');
 			}
@@ -154,7 +154,15 @@ const Settings = () => {
 
 			<Slider className='big_box' {...settings}>
 				<div className='box'>
-					<div className='wrapper'>
+					<motion.div
+						initial={{ opacity: 0, scale: 0.5 }}
+						animate={{ opacity: 1, scale: 1 }}
+						transition={{
+							duration: 1,
+							delay: 0.1,
+							ease: [0, 1, 0.2, 1.01],
+						}}
+						className='wrapper'>
 						<p className='tasbeh__display'>{counter}</p>
 						<motion.button
 							whileHover={{ scale: 1 }}
@@ -173,10 +181,18 @@ const Settings = () => {
 							<p className='ar'> الله أكب</p>
 							<p className=' ar_uz'>Allahu Akbar </p>
 						</motion.button>
-					</div>
+					</motion.div>
 				</div>
 				<div className='box'>
-					<div className='wrapper'>
+					<motion.div
+						initial={{ opacity: 0, scale: 0.5 }}
+						animate={{ opacity: 1, scale: 1 }}
+						transition={{
+							duration: 1,
+							delay: 0.1,
+							ease: [0, 1, 0.2, 1.01],
+						}}
+						className='wrapper'>
 						<p className='tasbeh__display'>{counter2}</p>
 						<motion.button
 							whileHover={{ scale: 1 }}
@@ -195,10 +211,18 @@ const Settings = () => {
 								bo‘lsin
 							</p>
 						</motion.button>
-					</div>
+					</motion.div>
 				</div>
 				<div className='box'>
-					<div className='wrapper'>
+					<motion.div
+						initial={{ opacity: 0, scale: 0.5 }}
+						animate={{ opacity: 1, scale: 1 }}
+						transition={{
+							duration: 1,
+							delay: 0.1,
+							ease: [0, 1, 0.2, 1.01],
+						}}
+						className='wrapper'>
 						<p className='tasbeh__display'>{counter3}</p>
 						<motion.button
 							whileHover={{ scale: 1 }}
@@ -216,10 +240,18 @@ const Settings = () => {
 								Allohni poklab yod etaman va u zotga hamd aytaman
 							</p>
 						</motion.button>
-					</div>
+					</motion.div>
 				</div>
 				<div className='box'>
-					<div className='wrapper'>
+					<motion.div
+						initial={{ opacity: 0, scale: 0.5 }}
+						animate={{ opacity: 1, scale: 1 }}
+						transition={{
+							duration: 1,
+							delay: 0.1,
+							ease: [0, 1, 0.2, 1.01],
+						}}
+						className='wrapper'>
 						<p className='tasbeh__display'>{counter4}</p>
 						<motion.button
 							whileHover={{ scale: 1 }}
@@ -239,7 +271,7 @@ const Settings = () => {
 								kamchilikdan poksan, albatta, men zolimlardan edim
 							</p>
 						</motion.button>
-					</div>
+					</motion.div>
 				</div>
 			</Slider>
 			<div>
