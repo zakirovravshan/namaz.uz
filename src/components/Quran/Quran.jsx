@@ -28,27 +28,16 @@ export const Quran = () => {
 	}, []);
 	return (
 		<div className=''>
-			<Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
-				<div className='tab__list'>
-					<TabList>
-						<Tab classID='add'>QURAN</Tab>
-						<Tab classID=''>UZ tarjima</Tab>
-						<Tab classID=''>RU tarjima</Tab>
-					</TabList>
+			<div class='card'>
+				<div class='card-front'>
+					<p>{quran[0]?.text}</p>
 				</div>
-				<div className='tab__panel'>
-					<TabPanel classID='tabs'>
-						{' '}
-						<p>{quran[0]?.text}</p>
-					</TabPanel>
-					<TabPanel classID='tabs'>
-						<p>{quran[1]?.text}</p>
-					</TabPanel>
-					<TabPanel classID='tabs'>
-						<p>{quran[2]?.text}</p>
-					</TabPanel>
+				<div class='card-back'>
+					<p>
+						<p>{quran[1]?.text}</p>.
+					</p>
 				</div>
-			</Tabs>
+			</div>
 		</div>
 	);
 };
