@@ -20,7 +20,7 @@ const Settings = () => {
 	var handleCount1 = () => {
 		if ('vibrate' in navigator) {
 			// Trigger the vibration for 200ms
-			navigator.vibrate(400);
+			navigator.vibrate(20);
 		} else {
 			console.log('Vibration not supported in this device.');
 		}
@@ -30,6 +30,12 @@ const Settings = () => {
 			});
 		}
 		if (counter == 32) {
+			if ('vibrate' in navigator) {
+				// Trigger the vibration for 200ms
+				navigator.vibrate(200);
+			} else {
+				console.log('Vibration not supported in this device.');
+			}
 			toast.success('Alhamdulillah 33ta ❗️', {
 				duration: 8000,
 			});

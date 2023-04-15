@@ -31,12 +31,12 @@ export const Quran = () => {
 		<div className=''>
 			<div class='card'>
 				<div class='card-front'>
-					<p>{quran[0]?.text}</p>
+					<p className='ayah' >{quran[0]?.text}</p>
 				</div>
 				<div class='card-back'>
-					<p>
-						<p>{quran[1]?.text}</p>.
-					</p>
+					
+						<p className='uz_sodik' >{quran[1]?.text}</p>.
+					
 				</div>
 			</div>
 			<div style={{ textAlign: 'center' }}>
