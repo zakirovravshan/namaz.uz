@@ -12,11 +12,11 @@ body {
 }
 
 .card {
-   
+
     margin: 0 auto;
     color: #1b1b1b;
-    width: 250px;
-    height: 299px;
+    width: 280px;
+    height: 329px;
     position: relative;
     outline: 6px solid #f5f5f5;
     border-radius: 8px;
@@ -26,39 +26,45 @@ body {
     background-blend-mode: multiply;
     transition: background-color 1s ease-in-out;
     overflow: hidden;
-    margin-top: 150px;
+    margin-top: 110px;
     overflow: auto;
-  }
-  
-  .card-front {
+    overflow-x: hidden;
+    margin-bottom:18px;
+}
+
+.card-front {
     padding: 20px;
     left: 0;
     position: absolute;
     width: 100%;
     text-align: center;
     transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);
-    
-  }
-  
-  .card-back {
+
+
+}
+
+.card-back {
     padding: 10px;
     margin: 0 auto;
     transform: translateX(120%);
     transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+    overflow: auto;
 
-  }
-  .card-back p {
+}
+
+.card-back p {
     text-align: justify;
-  }
-  
-  
-  /*Text*/
-  .title {
+}
+
+
+/*Text*/
+.title {
     font-size: 1.3rem;
     font-weight: bold;
-  }
-  /*Text divider*/
-  .title::after {
+}
+
+/*Text divider*/
+.title::after {
     content: "";
     display: block;
     width: 50%;
@@ -66,22 +72,70 @@ body {
     height: 2px;
     margin: 2px auto;
     background-color: #1b1b1b;
-  }
-  
-  
-  /*Hover*/
-  .card:hover {
+}
+
+
+/*Hover*/
+.card:hover {
     background-color: #1b1b1b25;
-    background-color: orange;
-  }
-  
-  .card:hover .card-front {
+    background-color: #d7a54e;
+}
+
+.card:hover .card-front {
     transform: translateX(-100%);
-  }
-  
-  .card:hover .card-back {
+}
+
+.card:hover .card-back {
     transform: translateX(0);
-  }
-  
-  
-  
+}
+
+.random__button {
+    
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contactButton {
+    background: teal;
+    color: white;
+    font-family: inherit;
+    padding: 0.45em;
+    padding-left: 1.0em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em teal;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3em;
+    margin: 0 auto;
+}
+
+.iconButton {
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em teal;
+    right: 0.3em;
+    transition: all 0.3s;
+}
+
+.contactButton:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em teal;
+}
+
+.contactButton:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em teal;
+}
