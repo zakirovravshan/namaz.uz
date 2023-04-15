@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'digitalkhatt2';
+    /* Replace with your desired font name */
+    src: url('../../assets/fonts/digitalkhatt2.otf') format('opentype');
+    /* Replace with the URL to your OTF font file */
+
+}
+
+body {
+    font-family: 'digitalkhatt2', sans-serif;
+    /* Replace with your desired font name */
+}
+
+
+.tab{
+    width: 30%;
+}
+.tab_list{
+    width: 80px;
+}
+
+.tab__panel{
+    overflow: scroll;
+    padding: 20px;
+}
+
+.tabs{
+    overflow: auto;
+}

@@ -14,43 +14,35 @@ export const Bar = () => {
 					<NavLink
 						to='/'
 						className={({ isActive, isPending }) =>
-							isPending ? 'link' : isActive ? 'activebar' : "link"
-						}
-						
-						>
+							isPending ? 'link' : isActive ? 'activebar' : 'link'
+						}>
 						<img src={pray} alt='tasbeh' width={'50px'} />{' '}
 					</NavLink>
 				</li>
 				<li className='bar__item'>
-				<NavLink
+					<NavLink
 						to='/settings'
 						className={({ isActive, isPending }) =>
-							isPending ? 'link' : isActive ? 'activebar' : "link"
-						}
-						
-						>
+							isPending ? 'link' : isActive ? 'activebar' : 'link'
+						}>
 						<img src={tasbeh} alt='pray icon' width={'50px'} />{' '}
 					</NavLink>
 				</li>
 				<li className='bar__item'>
-				<NavLink
+					<NavLink
 						to='/qibla'
 						className={({ isActive, isPending }) =>
-							isPending ? 'link' : isActive ? 'activebar' : "link"
-						}
-						
-						>
+							isPending ? 'link' : isActive ? 'activebar' : 'link'
+						}>
 						<img src={qibla} alt='qibla' width={'50px'} />{' '}
 					</NavLink>
 				</li>
 				<li className='bar__item'>
-				<NavLink
-						to='/b'
+					<NavLink
+						to='/application'
 						className={({ isActive, isPending }) =>
-							isPending ? 'link' : isActive ? 'activebar' : "link"
-						}
-						
-						>
+							isPending ? 'link' : isActive ? 'activebar' : 'link'
+						}>
 						<img src={app} alt='application' width={'50px'} />{' '}
 					</NavLink>
 				</li>
