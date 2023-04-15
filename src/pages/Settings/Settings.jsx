@@ -18,6 +18,12 @@ const Settings = () => {
 	var [counter5, setCounter5] = useState(localStorage.getItem('counter5'));
 
 	var handleCount1 = () => {
+		if ('vibrate' in navigator) {
+			// Trigger the vibration for 200ms
+			navigator.vibrate(400);
+		} else {
+			console.log('Vibration not supported in this device.');
+		}
 		if (counter == 0) {
 			toast.success('Subhanalloh 33taa', {
 				duration: 8000,
@@ -34,12 +40,6 @@ const Settings = () => {
 			});
 		}
 
-		if ('vibrate' in navigator) {
-			// Trigger the vibration for 200ms
-			navigator.vibrate(400);
-		} else {
-			console.log('Vibration not supported in this device.');
-		}
 		localStorage.setItem('counter', counter);
 		var number1 = JSON.parse(localStorage.getItem('counter'));
 		var sum1 = number1 + 1;
