@@ -33,6 +33,13 @@ const Settings = () => {
 				duration: 8000,
 			});
 		}
+
+		if ('vibrate' in navigator) {
+			// Trigger the vibration for 200ms
+			navigator.vibrate(200);
+		} else {
+			console.log('Vibration not supported in this device.');
+		}
 		localStorage.setItem('counter', counter);
 		var number1 = JSON.parse(localStorage.getItem('counter'));
 		var sum1 = number1 + 1;
@@ -138,7 +145,7 @@ const Settings = () => {
 				Reset All
 				<img src={redo} alt='redo' width={'20px'} />
 			</button>
-			
+
 			<Slider className='big_box' {...settings}>
 				<div className='box'>
 					<div className='wrapper'>

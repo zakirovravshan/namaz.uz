@@ -4,9 +4,9 @@ import Settings from './pages/Settings/Settings';
 import { Bar } from './components/Bar/Bar';
 import { Qibla } from './components/Qibla/Qibla';
 import { Quran } from './components/Quran/Quran';
+import VibrationButton from './components/Vibration';
 
 function App() {
-	
 	return (
 		<div>
 			
