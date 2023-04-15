@@ -31,7 +31,7 @@ export const Quran = () => {
 			<Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
 				<div className='tab__list'>
 					<TabList>
-						<Tab classID=''>QURAN</Tab>
+						<Tab classID='add'>QURAN</Tab>
 						<Tab classID=''>UZ tarjima</Tab>
 						<Tab classID=''>RU tarjima</Tab>
 					</TabList>
