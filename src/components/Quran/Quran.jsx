@@ -49,12 +49,28 @@ export const Quran = () => {
 					ease: [0, 1, 0.2, 1.01],
 				}}
 				className='main__quran'>
-				<p className='main__quran__ar	'>
+				<motion.p
+					initial={{ opacity: 0, scale: 0.5 }}
+					animate={{ opacity: 1, scale: 1 }}
+					transition={{
+						duration: 1,
+						delay: 0.1,
+						ease: [0, 1, 0.2, 1.01],
+					}}
+					className='main__quran__ar	'>
 					أَلَا بِذِكۡرِ ٱللَّهِ تَطۡمَئِنُّ ٱلۡقُلُوبُ
-				</p>
-				<p className='main__quran__uz'>
+				</motion.p>
+				<motion.p
+					initial={{ opacity: 0, scale: 0.5 }}
+					animate={{ opacity: 1, scale: 1 }}
+					transition={{
+						duration: 1,
+						delay: 0.1,
+						ease: [0, 1, 0.2, 1.01],
+					}}
+					className='main__quran__uz'>
 					Аllohni zikr qilish bilan qalblar orom olur.
-				</p>
+				</motion.p>
 			</motion.div>
 			<ul className='quran__list'>
 				{surah.length
