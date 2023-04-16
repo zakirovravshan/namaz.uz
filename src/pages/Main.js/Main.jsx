@@ -16,7 +16,7 @@ const Main = () => {
 		JSON.parse(localStorage.getItem('prayerTime')),
 	);
 
-	var namoz = Object.values(prayerTime.times);
+	var namoz = Object.values(prayerTime?.times);
 
 	const comparePrayerTime = (prayerTime) => {
 		const currentDateTime = moment(); // Предполагаем, что время намаза передается в формате 'HH:mm'
