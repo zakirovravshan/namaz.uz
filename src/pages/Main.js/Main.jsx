@@ -2,23 +2,85 @@ import React, { useState, useEffect } from 'react';
 import './Main.css';
 import axios from 'axios';
 import { motion } from 'framer-motion';
+import moment from 'moment/moment';
+import icon from '../../assets/icons/logo192.png';
 
 const Main = () => {
-	const [currentDateTime, setCurrentDateTime] = useState('');
+	const currentDateTime = moment(); // Предполагаем, что время намаза передается в формате 'HH:mm'
+
+	const min = currentDateTime.format('mm');
+	const hour = currentDateTime.hour();
+	const [soat, setSoat] = useState(`${hour} : ${min}`);
 	const [prayerTime, setPrayerTime] = useState(
 		JSON.parse(localStorage.getItem('prayerTime')),
 	);
 
-	// Function to update the current date and time
-	const updateCurrentDateTime = () => {
-		const currentDate = new Date();
+	var namoz = Object.values(prayerTime.times);
 
-		const hours = currentDate.getHours();
-		const minutes = currentDate.getMinutes();
-		const seconds = currentDate.getSeconds();
-		const currentDateTimeString = ` ${hours}:${minutes}`;
-		setCurrentDateTime(currentDateTimeString);
+	const comparePrayerTime = (prayerTime) => {
+		const currentDateTime = moment(); // Предполагаем, что время намаза передается в формате 'HH:mm'
+		const min = currentDateTime.format('mm');
+		const hour = currentDateTime.format('HH');
+		const vaqt = `${hour}:${min}`.trim(); // Производим нормализацию строки
+
+		prayerTime.forEach((el) => {
+			if (el === vaqt) {
+				// Используем строгое равенство
+
+				if (el == prayerTime) {
+					// Если текущее время равно времени намаза, выполняем необходимые действия, такие как показ уведомления с звуком и текстом
+
+					// Проверяем, поддерживает ли браузер API уведомлений
+					if (
+						'Notification' in window &&
+						window.Notification.permission === 'granted'
+					) {
+						// Запрашиваем разрешение на показ уведомления, если оно еще не было получено
+						window.Notification.requestPermission().then((permission) => {
+							if (permission === 'granted') requestNotificationPermission();
+							{
+								// Создаем уведомление с заданными параметрами
+								const notification = new window.Notification('Время намаза', {
+									body: 'Пора выполнять намаз', // Текст уведомления
+									icon: { icon }, // Путь к иконке уведомления
+									sound: 'путь_к_звуковому_файлу.mp3', // Путь к звуковому файлу
+								});
+							}
+						});
+					}
+				} else {
+					console.log('ishlamayabdi');
+				}
+			} else {
+				console.log('tengmas', el, vaqt);
+			}
+		});
 	};
+	function requestNotificationPermission() {
+		// Проверяем, поддерживает ли браузер уведомления
+		if ('Notification' in window) {
+			// Проверяем, есть ли уже разрешение на отправку уведомлений
+			if (Notification.permission === 'granted') {
+				console.log('Уведомления уже разрешены');
+			} else if (
+				Notification.permission !== 'denied' ||
+				Notification.permission === 'default'
+			) {
+				// Если разрешение не отклонено и не задано, то запрашиваем его
+				Notification.requestPermission().then(function (permission) {
+					if (permission === 'granted') {
+						console.log('Уведомления разрешены');
+					} else {
+						console.log('Уведомления не разрешены');
+					}
+				});
+			}
+		}
+	}
+
+	// Вызываем функцию для запроса разрешения на отправку уведомлений
+
+	comparePrayerTime(namoz);
 
 	const getData = () => {
 		axios
@@ -32,9 +94,7 @@ const Main = () => {
 
 	useEffect(() => {
 		getData();
-		updateCurrentDateTime();
 	}, []);
-	setInterval(updateCurrentDateTime, 1000);
 
 	return (
 		<div className='wrapper'>
@@ -46,7 +106,7 @@ const Main = () => {
 					</div>
 					<div className='city'>
 						<p> {prayerTime?.region}</p>
-						<p className='time'>{currentDateTime}</p>
+						<p className='time'>{'time'}</p>
 					</div>
 				</header>
 				<main>
