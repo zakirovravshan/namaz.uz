@@ -40,18 +40,18 @@ body {
     padding: 20px;
     border-radius: 16px;
     margin-bottom: 160px;
-    color: #fff;
+    color: #03AA77;
     font-weight: 700;
     font-size: 72px;
 }
 
 .reset__button {
     padding: 8px 12px;
-    color: #fff;
+    color: #03AA77;
     position: absolute;
     top: 15px;
     left: 15px;
-    background: rgba(255, 255, 255, 0.653);
+    background: rgba(231, 229, 229, 0.653);
     border-radius: 10px;
     box-shadow: 0 4px 30px rgba(197, 189, 189, 0.1);
     backdrop-filter: blur(11.8px);
@@ -63,7 +63,8 @@ body {
     width: 100%;
     max-width: 120px;
     border: none;
-    color: teal;
+    color: #03AA77;
+
     font-weight: 600;
     z-index: 999;
     cursor: pointer;
@@ -73,8 +74,10 @@ body {
     padding: 6px 0;
     margin-bottom: 8px;
     margin-top: 8px;
-    border-bottom: 2px dotted #46aa9e;
-    border-top: 2px dotted #46aa9e;
+    border-bottom: 2px dotted #03AA77;
+    border-top: 2px dotted #03AA77;
+    color: #03AA77;
+
 }
 
 .modal__button {
@@ -114,12 +117,12 @@ body {
 
 .uz {
     font-size: 10px;
-    color: #46aa9e;
+    color: #03AA77;
 }
 
 .ar_uz {
     font-size: 10px;
-    color: #46aa9e;
+    color: #03AA77;
 }
 
 .ar {

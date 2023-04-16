@@ -1,10 +1,10 @@
 import React from 'react';
 import './Bar.css';
 import { NavLink } from 'react-router-dom';
-import tasbeh from '../../assets/icons/tasbih.png';
-import pray from '../../assets/icons/time.png';
-import qibla from '../../assets/icons/qibla.png';
-import app from '../../assets/icons/application.png';
+import tasbeh from '../../assets/icons/tasbeh.svg';
+import pray from '../../assets/icons/masjid.png';
+import other from '../../assets/icons/other.svg';
+import app from '../../assets/icons/quran.svg';
 
 export const Bar = () => {
 	return (
@@ -16,7 +16,7 @@ export const Bar = () => {
 						className={({ isActive, isPending }) =>
 							isPending ? 'link' : isActive ? 'activebar' : 'link'
 						}>
-						<img className="bar__img" src={pray} alt='tasbeh' width={'50px'} />{' '}
+						<img className='bar__img' src={pray} alt='tasbeh' width={'50px'} />{' '}
 					</NavLink>
 				</li>
 				<li className='bar__item'>
@@ -25,7 +25,12 @@ export const Bar = () => {
 						className={({ isActive, isPending }) =>
 							isPending ? 'link' : isActive ? 'activebar' : 'link'
 						}>
-						<img className="bar__img" src={tasbeh} alt='pray icon' width={'50px'} />{' '}
+						<img
+							className='bar__img'
+							src={tasbeh}
+							alt='pray icon'
+							width={'50px'}
+						/>{' '}
 					</NavLink>
 				</li>
 				<li className='bar__item'>
@@ -34,7 +39,7 @@ export const Bar = () => {
 						className={({ isActive, isPending }) =>
 							isPending ? 'link' : isActive ? 'activebar' : 'link'
 						}>
-						<img className="bar__img" src={qibla} alt='qibla' width={'50px'} />{' '}
+						<img className='bar__img' src={other} alt='qibla' width={'50px'} />{' '}
 					</NavLink>
 				</li>
 				<li className='bar__item'>
@@ -43,7 +48,12 @@ export const Bar = () => {
 						className={({ isActive, isPending }) =>
 							isPending ? 'link' : isActive ? 'activebar' : 'link'
 						}>
-						<img className="bar__img" src={app} alt='application' width={'35px'} />{' '}
+						<img
+							className='bar__img'
+							src={app}
+							alt='application'
+							width={'35px'}
+						/>{' '}
 					</NavLink>
 				</li>
 			</ul>

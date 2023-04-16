@@ -4,6 +4,7 @@ import axios from 'axios';
 import { motion } from 'framer-motion';
 import moment from 'moment/moment';
 import icon from '../../assets/icons/logo192.png';
+import PrayerTimeComponent from '../../components/Timer/Timer';
 
 const Main = () => {
 	const currentDateTime = moment(); // Предполагаем, что время намаза передается в формате 'HH:mm'
@@ -106,11 +107,12 @@ const Main = () => {
 					</div>
 					<div className='city'>
 						<p> {prayerTime?.region}</p>
-						<p className='time'>{'time'}</p>
+						<p className='time'>{soat}</p>
 					</div>
 				</header>
 				<main>
 					<section>
+						<div className='main__img'>9:12:26</div>
 						<div className='taqvim__wrapper'>
 							<ul className='taqvim__list'>
 								<motion.li
@@ -122,10 +124,10 @@ const Main = () => {
 										delay: 0.1,
 										ease: [0, 1, 0.2, 1.01],
 									}}>
+									<p className='taqvim__item__text'>Saharlik</p>
 									<p className='taqvim__item__text__time'>
 										{prayerTime?.times?.tong_saharlik}
 									</p>
-									<p className='taqvim__item__text'>Saharlik</p>
 								</motion.li>
 								<motion.li
 									className='taqvim__item'
@@ -136,10 +138,10 @@ const Main = () => {
 										delay: 0.1,
 										ease: [0, 1, 0.2, 1.01],
 									}}>
+									<p className='taqvim__item__text'>Quyosh</p>
 									<p className='taqvim__item__text__time'>
 										{prayerTime?.times?.quyosh}
 									</p>
-									<p className='taqvim__item__text'>Quyosh</p>
 								</motion.li>
 								<motion.li
 									className='taqvim__item'
@@ -150,10 +152,10 @@ const Main = () => {
 										delay: 0.1,
 										ease: [0, 1, 0.2, 1.01],
 									}}>
+									<p className='taqvim__item__text'>Peshin</p>
 									<p className='taqvim__item__text__time'>
 										{prayerTime?.times?.peshin}
 									</p>
-									<p className='taqvim__item__text'>Peshin</p>
 								</motion.li>
 								<motion.li
 									className='taqvim__item'
@@ -164,10 +166,10 @@ const Main = () => {
 										delay: 0.1,
 										ease: [0, 1, 0.2, 1.01],
 									}}>
+									<p className='taqvim__item__text'>Asr</p>
 									<p className='taqvim__item__text__time'>
 										{prayerTime?.times?.asr}
 									</p>
-									<p className='taqvim__item__text'>Asr</p>
 								</motion.li>
 								<motion.li
 									className='taqvim__item'
@@ -178,10 +180,10 @@ const Main = () => {
 										delay: 0.1,
 										ease: [0, 1, 0.2, 1.01],
 									}}>
+									<p className='taqvim__item__text'>Shom</p>
 									<p className='taqvim__item__text__time'>
 										{prayerTime?.times?.shom_iftor}
 									</p>
-									<p className='taqvim__item__text'>Shom</p>
 								</motion.li>
 								<motion.li
 									className='taqvim__item'
@@ -192,10 +194,10 @@ const Main = () => {
 										delay: 0.1,
 										ease: [0, 1, 0.2, 1.01],
 									}}>
+									<p className='taqvim__item__text'>Hufton</p>
 									<p className='taqvim__item__text__time'>
 										{prayerTime?.times?.hufton}
 									</p>
-									<p className='taqvim__item__text'>Hufton</p>
 								</motion.li>
 							</ul>
 						</div>
