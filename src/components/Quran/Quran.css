@@ -11,6 +11,8 @@ body {
     /* Replace with your desired font name */
 }
 
+.quran {}
+
 .card {
 
     margin: 0 auto;
@@ -88,10 +90,7 @@ body {
 
 
 /*Hover*/
-.card:hover {
-    
-
-}
+.card:hover {}
 
 .card:hover .card-front {
     transform: translateX(-100%);
@@ -150,4 +149,134 @@ body {
 .contactButton:active {
     transform: translate(0.05em, 0.05em);
     box-shadow: 0.05em 0.05em teal;
+}
+
+.main__quran {
+    width: 100%;
+    max-width: 326px;
+    height: 130px;
+    margin: 30px auto;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 16px;
+    background-image: url("../../assets//images//mosque.svg"), linear-gradient(107deg, rgba(13, 198, 179, 0.763) 8.1%, rgba(33, 198, 137, 0.966) 79.5%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    text-align: center;
+    padding: 25px;
+
+}
+
+.main__quran__uz {
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.main__quran__ar {
+    font-size: 24px;
+    font-family: 'digitalkhatt2', sans-serif;
+    color: #fff;
+}
+
+.quran__list {
+    position: absolute;
+    top: 180px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    max-width: 326px;
+    padding: 10px;
+    gap: 10px;
+    background-color: #ffffff;
+    overflow: scroll;
+
+
+}
+
+
+
+.quran__item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 16px;
+    border: 1px dotted #03AA77;
+
+}
+
+.surah__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    text-justify: center;
+    /* identical to box height */
+    text-align: center;
+    margin-right: 10px;
+    position: relative;
+}
+
+.surah__number::before {
+    position: absolute;
+    content: "";
+    background-image: url("../../assets//icons/8burchak.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 40px;
+    height: 40px;
+}
+
+.surah__name__en {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.surah__rel {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+
+    color: #8789A3;
+}
+
+.surah__name {
+    font-family: 'digitalkhatt2', sans-serif;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 35px;
+    text-align: right;
+    background: linear-gradient(107deg, rgb(13, 198, 180) 8.1%, rgb(33, 198, 138) 79.5%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

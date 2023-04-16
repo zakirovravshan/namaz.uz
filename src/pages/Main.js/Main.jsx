@@ -52,9 +52,7 @@ const Main = () => {
 				} else {
 					console.log('ishlamayabdi');
 				}
-			} else {
-				console.log('tengmas', el, vaqt);
-			}
+			} 
 		});
 	};
 	function requestNotificationPermission() {

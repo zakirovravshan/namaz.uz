@@ -10,75 +10,83 @@ export const Quran = () => {
 	);
 
 	const [quran, setQuran] = useState({});
-	const getQuran = (number) => {
+	const [surah, setSurah] = useState({});
+	// const getQuran = (number) => {
+	// 	axios
+	// 		.get(
+	// 			`https://api.alquran.cloud/v1/ayah/${number}/editions/quran-madina,uz.sodik,ru.kuliev`,
+	// 		)
+	// 		.then((res) => {
+	// 			setQuran(res.data.data);
+	// 		})
+	// 		.catch((error) => console.log(error));
+	// };
+	// const generateRandomNumber = () => {
+	// 	const newRandomNumber = Math.floor(Math.random() * 6226) + 1;
+	// 	setRandomNumber(newRandomNumber);
+	// };
+
+	const getSurah = () => {
 		axios
-			.get(
-				`https://api.alquran.cloud/v1/ayah/${number}/editions/quran-madina,uz.sodik,ru.kuliev`,
-			)
+			.get('http://api.alquran.cloud/v1/surah')
 			.then((res) => {
-				setQuran(res.data.data);
+				console.log(res.data.data);
+				setSurah(res.data.data);
 			})
 			.catch((error) => console.log(error));
 	};
-	const generateRandomNumber = () => {
-		const newRandomNumber = Math.floor(Math.random() * 6226) + 1;
-		setRandomNumber(newRandomNumber);
-	};
 	useEffect(() => {
-		getQuran(randomNumber);
-	}, [randomNumber]);
+		getSurah();
+	}, []);
 
 	return (
-		<div className=''>
-			<div class='card'>
-				<div class='card-front'>
-					<motion.p
-						initial={{ opacity: 0, scale: 0.5 }}
-						animate={{ opacity: 1, scale: 1 }}
-						transition={{
-							duration: 0.5,
-							delay: 0.1,
-							ease: [0, 1, 0.2, 1.01],
-						}}
-						className='ayah'>
-						{quran[0]?.text}
-					</motion.p>
-				</div>
-				<div class='card-back'>
-					<motion.p
-						initial={{ opacity: 0, scale: 0.5 }}
-						animate={{ opacity: 1, scale: 1 }}
-						transition={{
-							duration: 1,
-							delay: 0.1,
-							ease: [0, 1, 0.2, 1.01],
-						}}
-						className='uz_sodik'>
-						{quran[1]?.text}
-					</motion.p>
-					.
-				</div>
-			</div>
-			<div style={{ textAlign: 'center' }}>
-				<button
-					onClick={() => generateRandomNumber()}
-					className='contactButton'>
-					Randomize
-					<div className='iconButton'>
-						<svg
-							xmlns='http://www.w3.org/2000/svg'
-							viewBox='0 0 24 24'
-							width={24}
-							height={24}>
-							<path fill='none' d='M0 0h24v24H0z' />
-							<path
-								fill='currentColor'
-								d='M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z'
-							/>
-						</svg>
-					</div>
-				</button>
-			</div>
+		<div className='quran'>
+			<motion.div
+				initial={{ opacity: 0, scale: 0.5 }}
+				animate={{ opacity: 1, scale: 1 }}
+				transition={{
+					duration: 1,
+					delay: 0.1,
+					ease: [0, 1, 0.2, 1.01],
+				}}
+				className='main__quran'>
+				<p className='main__quran__ar	'>
+					أَلَا بِذِكۡرِ ٱللَّهِ تَطۡمَئِنُّ ٱلۡقُلُوبُ
+				</p>
+				<p className='main__quran__uz'>
+					Аllohni zikr qilish bilan qalblar orom olur.
+				</p>
+			</motion.div>
+			<ul className='quran__list'>
+				{surah.length
+					? surah.map((el) => (
+							<motion.li
+								initial={{ opacity: 0, scale: 0.5 }}
+								animate={{ opacity: 1, scale: 1 }}
+								transition={{
+									duration: 1,
+									delay: 0.1,
+									ease: [0, 1, 0.2, 1.01],
+								}}
+								style={{
+									display: 'flex',
+									alignItems: 'center',
+									justifyContent: 'space-between',
+								}}
+								key={el.number}
+								className='quran__item'>
+								<div style={{ display: 'flex', alignItems: 'center' }}>
+									<p className='surah__number'>{el.number}</p>
+									<div>
+										<p className='surah__name__en'>{el.englishName}</p>
+										<p className='surah__rel'>{el.revelationType}</p>
+									</div>
+								</div>
+								<p className='surah__name'>{el.name}</p>
+							</motion.li>
+					  ))
+					: ''}
+			</ul>
 		</div>
 	);
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import './Bar.css';
 import { NavLink } from 'react-router-dom';
 import tasbeh from '../../assets/icons/tasbeh.svg';
-import pray from '../../assets/icons/masjid.png';
+import pray from '../../assets/icons/pray.svg';
 import other from '../../assets/icons/other.svg';
 import app from '../../assets/icons/quran.svg';
 
