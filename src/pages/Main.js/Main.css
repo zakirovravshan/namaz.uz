@@ -40,7 +40,7 @@ img {
 
 main {
     flex-grow: 1;
-    color: #008080;
+    
 
 }
 
@@ -56,7 +56,11 @@ main {
 .dates {
     text-align: start;
     font-weight: 600;
-    color: #03AA77;
+    background: linear-gradient(107deg, rgb(13, 198, 180) 8.1%, rgb(33, 198, 138) 79.5%);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Poppins', sans-serif;
 
 }
 
@@ -65,7 +69,11 @@ main {
     text-align: end;
     color: teal;
     font-family: 'Poppins', sans-serif;
-    color: #03AA77;
+    background: linear-gradient(107deg, rgb(13, 198, 180) 8.1%, rgb(33, 198, 138) 79.5%);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Poppins', sans-serif;
 
 }
 
@@ -74,7 +82,7 @@ main {
 .main__img {
     width: 100%;
     max-width: 326px;
-    height: 131px;
+    height: 161px;
     margin: 0 auto;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 16px;
@@ -82,6 +90,13 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
+    position: relative;
+    text-align: center;
+    padding: 25px;
+    font-weight: 600;
+    font-size: 48px;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
 }
 
 
@@ -106,7 +121,11 @@ button {
 }
 
 .taqvim__list {
-
+    position: absolute;
+    top: 200px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -114,8 +133,9 @@ button {
     flex-direction: column;
     flex-wrap: wrap;
     border-radius: 20px;
-    max-width: 340px;
+    max-width: 300px;
     gap: 10px;
+    background-color: #ffffff;
 
 
 }
@@ -140,10 +160,7 @@ p {
     font-weight: 500;
     padding: 10px;
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    background-color: #ffffff;
-    background-image: linear-gradient(315deg, #ffffff, #d7e1ec 74%);
-
+    border: 1px dotted #03AA77;
 
 }
 
