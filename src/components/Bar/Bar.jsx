@@ -16,7 +16,7 @@ export const Bar = () => {
 						className={({ isActive, isPending }) =>
 							isPending ? 'link' : isActive ? 'activebar' : 'link'
 						}>
-						<img src={pray} alt='tasbeh' width={'50px'} />{' '}
+						<img className="bar__img" src={pray} alt='tasbeh' width={'50px'} />{' '}
 					</NavLink>
 				</li>
 				<li className='bar__item'>
@@ -25,7 +25,7 @@ export const Bar = () => {
 						className={({ isActive, isPending }) =>
 							isPending ? 'link' : isActive ? 'activebar' : 'link'
 						}>
-						<img src={tasbeh} alt='pray icon' width={'50px'} />{' '}
+						<img className="bar__img" src={tasbeh} alt='pray icon' width={'50px'} />{' '}
 					</NavLink>
 				</li>
 				<li className='bar__item'>
@@ -34,7 +34,7 @@ export const Bar = () => {
 						className={({ isActive, isPending }) =>
 							isPending ? 'link' : isActive ? 'activebar' : 'link'
 						}>
-						<img src={qibla} alt='qibla' width={'50px'} />{' '}
+						<img className="bar__img" src={qibla} alt='qibla' width={'50px'} />{' '}
 					</NavLink>
 				</li>
 				<li className='bar__item'>
@@ -43,7 +43,7 @@ export const Bar = () => {
 						className={({ isActive, isPending }) =>
 							isPending ? 'link' : isActive ? 'activebar' : 'link'
 						}>
-						<img src={app} alt='application' width={'35px'} />{' '}
+						<img className="bar__img" src={app} alt='application' width={'35px'} />{' '}
 					</NavLink>
 				</li>
 			</ul>

@@ -71,10 +71,11 @@ main {
     font-weight: 600;
     text-align: end;
     color: teal;
+    font-family: 'Poppins', sans-serif;
 }
 
 .time {
-    padding: 0px;
+    padding: 6px;
     border-radius: 10px;
     text-align: center;
     font-weight: 500;
@@ -83,6 +84,7 @@ main {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(11.8px);
     -webkit-backdrop-filter: blur(11.8px);
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -101,11 +103,12 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+    font-family: 'Poppins', sans-serif;
+
 }
 
 .taqvim__list {
-   
+    
     padding: 20px;
     display: flex;
     align-items: center;
@@ -114,7 +117,7 @@ button {
     border-radius: 20px;
     max-width: 340px;
     gap: 30px;
-    margin: 0 auto;
+    margin: 30px auto;
 
 
 }
@@ -133,219 +136,35 @@ p {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 10px 15px;
     width: 100%;
-    max-width: 125px;
+    width: 125px;
+    height: 115px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     font-weight: 500;
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  
-
-}
-
-
-.taqvim__item:nth-child(1) {
-    background-image: url("../../assets/images/6.jpg");
-    background-repeat: no-repeat;
-    background-position: bottom;
-    position: relative;
+    background-color: #ffffff;
+    background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
 
 
 }
 
-.taqvim__item:nth-child(1)::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    /* backdrop-filter: blur(11.8px);
-    -webkit-backdrop-filter: blur(11.8px);
-    z-index: 1;
-    border-radius: 16px; */
-
-}
-
-.taqvim__item:nth-child(1)::after {
-
-    content: "";
-    /* Создаем пустой контент */
-    display: block;
-    /* Блочный элемент */
-    position: absolute;
-    /* Положение псевдоэлемента должно быть абсолютным */
-    top: 0;
-    /* Расположение сверху */
-    left: 0;
-    /* Расположение слева */
-    width: 100%;
-    /* Ширина на 100% */
-    height: 100%;
-    /* Высота на 100% */
-
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-    z-index: 1;
-    /* Поднимаем слой на передний план */
-    border-radius: 16px;
 
 
-}
-
-.taqvim__item:nth-child(2)::after {
-
-    content: "";
-    /* Создаем пустой контент */
-    display: block;
-    /* Блочный элемент */
-    position: absolute;
-    /* Положение псевдоэлемента должно быть абсолютным */
-    top: 0;
-    /* Расположение сверху */
-    left: 0;
-    /* Расположение слева */
-    width: 100%;
-    /* Ширина на 100% */
-    height: 100%;
-    /* Высота на 100% */
-    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-    z-index: 1; */
-    /* Поднимаем слой на передний план */
-    border-radius: 16px;
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-    z-index: 1;
 
 
-}
-
-.taqvim__item:nth-child(3)::after {
-
-    content: "";
-    /* Создаем пустой контент */
-    display: block;
-    /* Блочный элемент */
-    position: absolute;
-    /* Положение псевдоэлемента должно быть абсолютным */
-    top: 0;
-    /* Расположение сверху */
-    left: 0;
-    /* Расположение слева */
-    width: 100%;
-    /* Ширина на 100% */
-    height: 100%;
-    /* Высота на 100% */
-    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px); */
-
-    z-index: 1;
-    /* Поднимаем слой на передний план */
-    border-radius: 16px;
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-    z-index: 1;
 
 
-}
-
-.taqvim__item:nth-child(4)::after {
-
-    content: "";
-    /* Создаем пустой контент */
-    display: block;
-    /* Блочный элемент */
-    position: absolute;
-    /* Положение псевдоэлемента должно быть абсолютным */
-    top: 0;
-    /* Расположение сверху */
-    left: 0;
-    /* Расположение слева */
-    width: 100%;
-    /* Ширина на 100% */
-    height: 100%;
-    /* Высота на 100% */
-    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-    z-index: 1; */
-   
-    /* Поднимаем слой на передний план */
-    border-radius: 16px;
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-    z-index: 1;
 
 
-}
-
-.taqvim__item:nth-child(5)::after {
-
-    content: "";
-    /* Создаем пустой контент */
-    display: block;
-    /* Блочный элемент */
-    position: absolute;
-    /* Положение псевдоэлемента должно быть абсолютным */
-    top: 0;
-    /* Расположение сверху */
-    left: 0;
-    /* Расположение слева */
-    width: 100%;
-    /* Ширина на 100% */
-    height: 100%;
-    /* Высота на 100% */
-    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-    z-index: 1; */
-    /* Поднимаем слой на передний план */
-    border-radius: 16px;
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-    z-index: 1;
 
 
-}
-
-.taqvim__item:nth-child(6)::after {
-
-    content: "";
-    /* Создаем пустой контент */
-    display: block;
-    /* Блочный элемент */
-    position: absolute;
-    /* Положение псевдоэлемента должно быть абсолютным */
-    top: 0;
-    /* Расположение сверху */
-    left: 0;
-    /* Расположение слева */
-    width: 100%;
-    /* Ширина на 100% */
-    height: 100%;
-    /* Высота на 100% */
-    /* backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-    z-index: 1; */
-  
-    /* Поднимаем слой на передний план */
-    border-radius: 16px;
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-    z-index: 1;
 
 
-}
 
-.taqvim__item:nth-child(2) {
+/* .taqvim__item:nth-child(2) {
     background-image: url("../../assets/images/2.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -376,19 +195,24 @@ p {
     background-position: bottom;
     position: relative;
 
-}
+} */
 
-.taqvim__item:nth-child(6) {
+/* .taqvim__item:nth-child(6) {
     background-image: url("../../assets/images/7.jpg");
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
     background-position: bottom;
 
-}
+} */
 
 .taqvim__item__text {
-    z-index: 3;
+
+    background: linear-gradient(107deg, rgb(13, 198, 180) 8.1%, rgb(33, 198, 138) 79.5%);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Poppins', sans-serif;
 
 }
 
@@ -396,5 +220,12 @@ p {
     z-index: 3;
     font-size: 24px;
     font-weight: 700;
+    background: linear-gradient(107deg, rgb(13, 198, 180) 8.1%, rgb(33, 198, 138) 79.5%);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Poppins', sans-serif;
+
+
 
 }
