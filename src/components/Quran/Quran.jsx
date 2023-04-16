@@ -28,7 +28,7 @@ export const Quran = () => {
 
 	const getSurah = () => {
 		axios
-			.get('http://api.alquran.cloud/v1/surah')
+			.get('https://api.alquran.cloud/v1/surah')
 			.then((res) => {
 				setSurah(res.data.data);
 			})
