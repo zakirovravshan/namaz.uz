@@ -127,3 +127,8 @@
     background-color: transparent;
     border: none;
 }
+.bar__copy__button{
+    display: flex;
+   justify-items: center;
+   align-items: center;
+}

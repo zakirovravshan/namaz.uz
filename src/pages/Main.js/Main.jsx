@@ -110,7 +110,7 @@ const Main = () => {
 				</header>
 				<main>
 					<section>
-						<div className='main__img'>9:12:26</div>
+						<div className='main__img'>1:12:26</div>
 						<div className='taqvim__wrapper'>
 							<ul className='taqvim__list'>
 								<motion.li

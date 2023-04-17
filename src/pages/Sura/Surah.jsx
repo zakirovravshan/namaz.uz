@@ -8,6 +8,8 @@ import bismillah from '../../assets/images/bismillah.svg';
 import play from '../../assets/icons/play.svg';
 import copy from '../../assets/icons/copy.svg';
 import clipboardCopy from 'clipboard-copy';
+import { Toaster, toast } from 'react-hot-toast';
+import { MdOutlineLanguage } from 'react-icons/md';
 
 export const Surah = () => {
 	const { number } = useParams();
@@ -70,7 +72,7 @@ export const Surah = () => {
 									</div>
 									<div
 										style={{
-											width: '60px',
+											width: '100px',
 											display: 'flex',
 											alignItems: 'center',
 											justifyContent: 'space-between',
@@ -85,9 +87,17 @@ export const Surah = () => {
 										<button
 											className='bar__copy__button'
 											onClick={() => {
+												toast.success('Copied');
 												clipboardCopy(el.text);
 											}}>
 											<img src={copy} alt='playbutton' width={'20px'} />
+										</button>
+										<button
+											className='bar__copy__button'
+											onClick={() => {
+												toast.success('Copied');
+											}}>
+											<MdOutlineLanguage size={"23px"} color='#03AA77' />
 										</button>
 									</div>
 								</div>
@@ -99,6 +109,7 @@ export const Surah = () => {
 			) : (
 				''
 			)}
+			<Toaster />
 		</div>
 	);
 };
