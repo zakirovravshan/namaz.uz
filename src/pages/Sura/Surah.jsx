@@ -17,28 +17,27 @@ export const Surah = () => {
 
 	const getSurah = () => {
 		axios
-			.get(`http://api.alquran.cloud/v1/surah/${number}`)
+			.get(`https://api.alquran.cloud/v1/surah/${number}`)
 			.then((res) => {
 				setSurah(res.data.data);
-				console.log(res.data.data);
 			})
 			.catch((error) => console.log(error));
 	};
 
-	const getTranslation = () => {
-		axios
-			.get(
-				`https://api.alquran.cloud/v1/surah/${number}/editions/uz.sodik,ru.kuliev`,
-			)
-			.then((res) => {
-				console.log(res.data.data);
-				setTranslation(res.data.data);
-			})
-			.catch((error) => console.log(error));
-	};
+	// const getTranslation = () => {
+	// 	axios
+	// 		.get(
+	// 			`https://api.alquran.cloud/v1/surah/${number}/editions/uz.sodik,ru.kuliev`,
+	// 		)
+	// 		.then((res) => {
+	// 			console.log(res.data.data);
+	// 			setTranslation(res.data.data);
+	// 		})
+	// 		.catch((error) => console.log(error));
+	// };
 	useEffect(() => {
 		getSurah();
-		getTranslation();
+		// getTranslation();
 	}, []);
 
 	return (
