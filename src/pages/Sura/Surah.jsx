@@ -34,16 +34,16 @@ export const Surah = () => {
 	};
 	const getTranslation = (numberayah) => {
 		axios
-			.get(`http://api.alquran.cloud/v1/ayah/${numberayah}/uz.sodik`)
+			.get(`https://api.alquran.cloud/v1/ayah/${numberayah}/uz.sodik`)
 			.then((res) => {
-				console.log(res.data.data);
+	
 				setTranslation(res.data.data);
 			})
 			.catch((error) => console.log(error));
 	};
 	useEffect(() => {
 		getSurah();
-		// getTranslation();
+		
 	}, []);
 
 	return (
@@ -144,7 +144,7 @@ export const Surah = () => {
 												}}>
 												<h3 className='text-sm'>
 													{translation?.surah?.englishName} -  
-													{translation?.numberInSurah} oyati
+													{translation?.numberInSurah} oyat
 												</h3>
 												<Button
 													style={{
