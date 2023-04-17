@@ -10,6 +10,7 @@ import copy from '../../assets/icons/copy.svg';
 import clipboardCopy from 'clipboard-copy';
 import { Toaster, toast } from 'react-hot-toast';
 import { MdOutlineLanguage } from 'react-icons/md';
+import { VscChromeClose } from 'react-icons/vsc';
 import ReactModal from 'react-modal';
 import { Button } from '@mui/material';
 
@@ -36,14 +37,12 @@ export const Surah = () => {
 		axios
 			.get(`https://api.alquran.cloud/v1/ayah/${numberayah}/uz.sodik`)
 			.then((res) => {
-	
 				setTranslation(res.data.data);
 			})
 			.catch((error) => console.log(error));
 	};
 	useEffect(() => {
 		getSurah();
-		
 	}, []);
 
 	return (
@@ -112,7 +111,7 @@ export const Surah = () => {
 												left: 0,
 												width: '100vw',
 												height: '100vh',
-												background: 'rgba(255, 255, 255, 0.008)',
+												background: 'rgba(255, 255, 255, 0.3)',
 												display: 'flex',
 												alignItems: 'center',
 												justifyContent: 'center',
@@ -129,36 +128,46 @@ export const Surah = () => {
 											},
 										}}
 										isOpen={modal}>
-										<div
-											className=''
-											style={{
-												overflow: 'auto',
-												height: '300px',
-												padding: '10px',
-											}}>
+										<div className=''>
 											<div
 												style={{
 													display: 'flex',
 													alignItems: 'center',
 													justifyContent: 'space-between',
 												}}>
-												<h3 className='text-sm'>
-													{translation?.surah?.englishName} -  
-													{translation?.numberInSurah} oyat
-												</h3>
+												<div
+													style={{
+														display: 'flex',
+														alignItems: 'center',
+														justifyContent: 'space-between',
+													}}>
+													<h3 className='modal__title'>
+														{translation?.surah?.englishName}
+													</h3>
+													<h3 className='modal__title'>
+														{translation?.numberInSurah} oyat
+													</h3>
+												</div>
 												<Button
 													style={{
-														maxWidth: '30px',
+														maxWidth: '40px',
 														maxHeight: '30px',
 														minWidth: '30px',
 														minHeight: '30px',
+														padding:"0px"
 													}}
 													color='error'
 													onClick={() => setModal(false)}>
-													x
+													<VscChromeClose size={"30px"}  />
 												</Button>
 											</div>
-											<div>
+											<div
+												className='modal__content'
+												style={{
+													overflow: 'auto',
+													height: '300px',
+													padding: '20px',
+												}}>
 												<p style={{ textAlign: 'justify' }}>
 													{translation?.text}
 												</p>
