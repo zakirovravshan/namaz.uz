@@ -15,7 +15,7 @@ import { Button } from '@mui/material';
 
 export const Surah = () => {
 	const { number } = useParams();
-	const [modal, setModal] = useState(true);
+	const [modal, setModal] = useState(false);
 	const [surah, setSurah] = useState({});
 	const [translation, setTranslation] = useState({});
 	const navigate = useNavigate();
