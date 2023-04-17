@@ -204,7 +204,10 @@ body {
 
 }
 
-
+.quran__item__link {
+    text-decoration: none;
+    width: 100%;
+}
 
 .quran__item {
     display: flex;
@@ -236,6 +239,7 @@ body {
     text-align: center;
     margin-right: 10px;
     position: relative;
+    color: #333;
 }
 
 .surah__number::before {
@@ -254,6 +258,10 @@ body {
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
+    /* background: linear-gradient(107deg, rgb(13, 198, 180) 8.1%, rgb(33, 198, 138) 79.5%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    color: #333;
 }
 
 .surah__rel {

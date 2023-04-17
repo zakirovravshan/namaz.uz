@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import './Quran.css';
 import 'react-tabs/style/react-tabs.css';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 export const Quran = () => {
 	const [randomNumber, setRandomNumber] = useState(
@@ -75,30 +76,35 @@ export const Quran = () => {
 			<ul className='quran__list'>
 				{surah.length
 					? surah.map((el) => (
-							<motion.li
-								initial={{ opacity: 0, scale: 0.5 }}
-								animate={{ opacity: 1, scale: 1 }}
-								transition={{
-									duration: 1,
-									delay: 0.1,
-									ease: [0, 1, 0.2, 1.01],
-								}}
-								style={{
-									display: 'flex',
-									alignItems: 'center',
-									justifyContent: 'space-between',
-								}}
+							<Link
 								key={el.number}
-								className='quran__item'>
-								<div style={{ display: 'flex', alignItems: 'center' }}>
-									<p className='surah__number'>{el.number}</p>
-									<div>
-										<p className='surah__name__en'>{el.englishName}</p>
-										<p className='surah__rel'>{el.revelationType}</p>
+								className='quran__item__link'
+								to={`/quran/surah/${el.number}`}>
+								<motion.li
+									initial={{ opacity: 0, scale: 0.5 }}
+									animate={{ opacity: 1, scale: 1 }}
+									transition={{
+										duration: 1,
+										delay: 0.1,
+										ease: [0, 1, 0.2, 1.01],
+									}}
+									style={{
+										display: 'flex',
+										alignItems: 'center',
+										justifyContent: 'space-between',
+									}}
+									key={el.number}
+									className='quran__item'>
+									<div style={{ display: 'flex', alignItems: 'center' }}>
+										<p className='surah__number'>{el.number}</p>
+										<div>
+											<p className='surah__name__en'>{el.englishName}</p>
+											<p className='surah__rel'>{el.revelationType}</p>
+										</div>
 									</div>
-								</div>
-								<p className='surah__name'>{el.name}</p>
-							</motion.li>
+									<p className='surah__name'>{el.name}</p>
+								</motion.li>
+							</Link>
 					  ))
 					: ''}
 			</ul>

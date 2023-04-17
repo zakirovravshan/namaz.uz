@@ -35,16 +35,7 @@ export const Bar = () => {
 				</li>
 				<li className='bar__item'>
 					<NavLink
-						to='/qibla'
-						className={({ isActive, isPending }) =>
-							isPending ? 'link' : isActive ? 'activebar' : 'link'
-						}>
-						<img className='bar__img' src={other} alt='qibla' width={'50px'} />{' '}
-					</NavLink>
-				</li>
-				<li className='bar__item'>
-					<NavLink
-						to='/application'
+						to='/quran'
 						className={({ isActive, isPending }) =>
 							isPending ? 'link' : isActive ? 'activebar' : 'link'
 						}>
@@ -54,6 +45,15 @@ export const Bar = () => {
 							alt='application'
 							width={'35px'}
 						/>{' '}
+					</NavLink>
+				</li>
+				<li className='bar__item'>
+					<NavLink
+						to='/qibla'
+						className={({ isActive, isPending }) =>
+							isPending ? 'link' : isActive ? 'activebar' : 'link'
+						}>
+						<img className='bar__img' src={other} alt='qibla' width={'50px'} />{' '}
 					</NavLink>
 				</li>
 			</ul>

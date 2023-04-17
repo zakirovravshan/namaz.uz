@@ -1,0 +1,129 @@
+.surah__page {
+    padding: 20px;
+}
+
+.surah_header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.surah__title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    background: linear-gradient(107deg, rgb(13, 198, 180) 8.1%, rgb(33, 198, 138) 79.5%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 20px;
+
+}
+
+.back__button {
+    background-color: transparent;
+    border: none;
+}
+
+.surah__img {
+    width: 327px;
+    height: 230px;
+    background-image: url("../../assets//images//quran2.svg"), linear-gradient(135deg, rgb(13, 198, 180) 8.1%, rgb(33, 198, 138) 79.5%);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    border-radius: 16px;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.surah__img__content {
+
+    width: 215px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.surah__img__title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 39px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 4px;
+
+}
+
+.surah__img__en {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+}
+
+.line {
+    display: block;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.76);
+    margin-bottom: 16px;
+}
+
+.surah__img__subtitle {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.ayah__bar {
+    background: rgba(18, 25, 49, 0.05);
+    border-radius: 10px;
+    padding: 8px 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+}
+
+.bar__number {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 25px;
+    height: 25px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: #FFFFFF;
+    text-align: center;
+    background: linear-gradient(107deg, rgb(13, 198, 180) 8.1%, rgb(33, 198, 138) 79.5%);
+    border-radius: 13.5px;
+}
+.bar__text{
+    margin: 0 auto;
+}
+
+.bar__ar {
+    text-align: end;
+}
+
+.bar__copy__button{
+    background-color: transparent;
+    border: none;
+}

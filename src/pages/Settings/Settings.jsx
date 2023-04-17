@@ -9,6 +9,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
 import { Toaster, toast } from 'react-hot-toast';
+import { Audios } from '../../components/Audios';
 
 const Settings = () => {
 	var [counter, setCounter] = useState(localStorage.getItem('counter'));
@@ -151,7 +152,7 @@ const Settings = () => {
 				Reset All
 				<img src={redo} alt='redo' width={'20px'} />
 			</button>
-
+			<Audios />
 			<Slider className='big_box' {...settings}>
 				<div className='box'>
 					<motion.div
