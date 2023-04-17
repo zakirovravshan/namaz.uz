@@ -9,7 +9,6 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
 import { Toaster, toast } from 'react-hot-toast';
-import { Audios } from '../../components/Audios';
 
 const Settings = () => {
 	var [counter, setCounter] = useState(localStorage.getItem('counter'));
@@ -279,58 +278,7 @@ const Settings = () => {
 			</div>
 		</div>
 	);
-	// <ReactModal
-	// 	onRequestClose={() => setModal(false)}
-	// 	style={{
-	// 		overlay: {
-	// 			position: 'fixed',
-	// 			zIndex: 1020,
-	// 			top: 0,
-	// 			left: 0,
-	// 			width: '100vw',
-	// 			height: '100vh',
-	// 			background: 'rgba(255, 255, 255, 0.3)',
-	// 			display: 'flex',
-	// 			alignItems: 'center',
-	// 			justifyContent: 'center',
-	// 		},
-	// 		content: {
-	// 			background: 'white',
-	// 			width: '300px',
-	// 			maxWidth: '32rem',
-	// 			maxHeight: 'calc(100vh - 2rem)',
-	// 			overflowY: 'auto',
-	// 			position: 'abdolute',
-	// 			border: '1px solid #ccc',
-	// 			borderRadius: '20px',
-
-	// 		},
-	// 	}}
-	// 	isOpen={modal}>
-	// 	<div className=''>
-	// 		<div style={{display:"flex" , alignItems:"center",justifyContent:"space-between"}}>
-	// 			<h3 className='text-sm'>Zikrlar : </h3>
-	// 			<Button
-	// 				style={{
-	// 					maxWidth: '30px',
-	// 					maxHeight: '30px',
-	// 					minWidth: '30px',
-	// 					minHeight: '30px',
-	// 				}}
-	// 				color='error'
-	// 				onClick={() => setModal(false)}>
-	// 				x
-	// 			</Button>
-	// 		</div>
-	// 		<div >
-	// 				<ul>
-	// 					<li>
-
-	// 					</li>
-	// 				</ul>
-	// 		</div>
-	// 	</div>
-	// </ReactModal>
+	
 };
 
 export default Settings;
