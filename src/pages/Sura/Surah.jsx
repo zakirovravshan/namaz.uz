@@ -17,6 +17,8 @@ import { Button } from '@mui/material';
 export const Surah = () => {
 	const { number } = useParams();
 	const [modal, setModal] = useState(false);
+	const [language, setLanguage] = useState(false);
+	const [til, setTil] = useState('ru.kuliev');
 	const [surah, setSurah] = useState({});
 	const [translation, setTranslation] = useState({});
 	const navigate = useNavigate();
@@ -29,21 +31,32 @@ export const Surah = () => {
 			})
 			.catch((error) => console.log(error));
 	};
-	const handleTranslate = (number) => {
-		setModal(true);
-		getTranslation(number);
+	// const handleTranslate = (number) => {
+	// 	setModal(true);
+	// 	getTranslation(number);
+	// };
+
+	const handleLanguage = () => {
+		setLanguage(!language);
+		if (language) {
+			setTil('ru.kuliev');
+		} else {
+			setTil('uz.sodik');
+		}
 	};
-	const getTranslation = (numberayah) => {
+
+	const getTranslation = () => {
 		axios
-			.get(`https://api.alquran.cloud/v1/ayah/${numberayah}/uz.sodik`)
+			.get(`https://api.alquran.cloud/v1/surah/${number}/${til}`)
 			.then((res) => {
-				setTranslation(res.data.data);
+				setTranslation(res.data.data.ayahs);
 			})
 			.catch((error) => console.log(error));
 	};
 	useEffect(() => {
 		getSurah();
-	}, []);
+		getTranslation();
+	}, [til]);
 
 	return (
 		<div className='surah__page'>
@@ -53,7 +66,24 @@ export const Surah = () => {
 						<button className='back__button' onClick={() => navigate(-1)}>
 							<img src={back} alt='back button' />
 						</button>
-						<p className='surah__title'>{surah.englishName}</p>
+						<p style={{ marginRight: 'auto' }} className='surah__title'>
+							{surah.englishName}
+						</p>
+
+						<button
+							className='bar__copy__button'
+							onClick={() => handleLanguage()}>
+							<MdOutlineLanguage
+								className='lang__icon'
+								size={'23px'}
+								color='#03AA77'
+							/>
+							{language ? (
+								<p className='text'>UZ</p>
+							) : (
+								<p className='text'>RU</p>
+							)}
+						</button>
 					</div>
 					<div className='surah__img'>
 						<div className='surah__img__content'>
@@ -75,7 +105,7 @@ export const Surah = () => {
 									</div>
 									<div
 										style={{
-											width: '100px',
+											width: '70px',
 											display: 'flex',
 											alignItems: 'center',
 											justifyContent: 'space-between',
@@ -84,6 +114,7 @@ export const Surah = () => {
 											className='bar__copy__button'
 											onClick={() => {
 												clipboardCopy(el.text);
+												
 											}}>
 											<img src={play} alt='playbutton' width={'15px'} />
 										</button>
@@ -95,87 +126,12 @@ export const Surah = () => {
 											}}>
 											<img src={copy} alt='playbutton' width={'20px'} />
 										</button>
-										<button
-											className='bar__copy__button'
-											onClick={() => handleTranslate(el.number)}>
-											<MdOutlineLanguage size={'23px'} color='#03AA77' />
-										</button>
 									</div>
-									<ReactModal
-										onRequestClose={() => setModal(false)}
-										style={{
-											overlay: {
-												position: 'fixed',
-												zIndex: 1020,
-												top: 0,
-												left: 0,
-												width: '100vw',
-												height: '100vh',
-												background: 'rgba(255, 255, 255, 0.3)',
-												display: 'flex',
-												alignItems: 'center',
-												justifyContent: 'center',
-											},
-											content: {
-												background: 'white',
-												width: '300px',
-												maxWidth: '32rem',
-												maxHeight: 'calc(100vh - 2rem)',
-												overflowY: 'auto',
-												position: 'abdolute',
-												border: '1px solid #ccc',
-												borderRadius: '20px',
-											},
-										}}
-										isOpen={modal}>
-										<div className=''>
-											<div
-												style={{
-													display: 'flex',
-													alignItems: 'center',
-													justifyContent: 'space-between',
-												}}>
-												<div
-													style={{
-														display: 'flex',
-														alignItems: 'center',
-														justifyContent: 'space-between',
-													}}>
-													<h3 className='modal__title'>
-														{translation?.surah?.englishName}
-													</h3>
-													<h3 className='modal__title'>
-														{translation?.numberInSurah} oyat
-													</h3>
-												</div>
-												<Button
-													style={{
-														maxWidth: '40px',
-														maxHeight: '30px',
-														minWidth: '30px',
-														minHeight: '30px',
-														padding:"0px"
-													}}
-													color='error'
-													onClick={() => setModal(false)}>
-													<VscChromeClose size={"30px"}  />
-												</Button>
-											</div>
-											<div
-												className='modal__content'
-												style={{
-													overflow: 'auto',
-													height: '300px',
-													padding: '20px',
-												}}>
-												<p style={{ textAlign: 'justify' }}>
-													{translation?.text}
-												</p>
-											</div>
-										</div>
-									</ReactModal>
 								</div>
 								<p className='bar__ar'>{el.text}</p>
+								<p className='bar__tr' style={{ textAlign: 'justify' }}>
+									{translation[el.numberInSurah - 1]?.text}
+								</p>
 							</div>
 						))}
 					</div>
