@@ -5,6 +5,12 @@
     /* Replace with the URL to your OTF font file */
 
 }
+@font-face {
+    font-family: 'noorehidayat';
+    src: url('../../assets//fonts/noorehidayat.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
 
 body {
     font-family: 'digitalkhatt2', sans-serif;

@@ -111,9 +111,11 @@
     justify-content: space-between;
     height: 40px;
 }
-.bar__copy__button{
+
+.bar__copy__button {
     cursor: pointer;
 }
+
 .bar__number {
     display: flex;
     align-items: center;
@@ -139,13 +141,15 @@
 .bar__ar {
     text-align: end;
     background: linear-gradient(107deg, rgb(13, 198, 180) 8.1%, rgb(33, 198, 138) 79.5%);
-    font-family: 'Amiri Quran', serif;
+    font-family: 'noorehidayat', serif;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 600;
     margin-bottom: 10px;
+    color: #fff;
 }
-.bar__tr{
+
+.bar__tr {
     text-align: end;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
