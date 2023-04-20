@@ -1,5 +1,6 @@
 .surah__page {
     padding: 20px;
+    padding-bottom: 120px;
 }
 
 .surah_header {
@@ -13,6 +14,14 @@
     left: 0;
     right: 0;
     margin: 0 auto;
+    position: fixed;
+    /* From https://css.glass */
+    background: rgba(184, 182, 182, 0.178);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(13.9px);
+    -webkit-backdrop-filter: blur(13.9px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .surah__title {
