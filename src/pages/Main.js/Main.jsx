@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import moment from 'moment/moment';
 import icon from '../../assets/icons/logo192.png';
 import PrayerTimeComponent from '../../components/Timer/Timer';
+import { MdLocationOn } from 'react-icons/md';
 
 const Main = () => {
 	const currentDateTime = moment(); // Предполагаем, что время намаза передается в формате 'HH:mm'
@@ -52,7 +53,7 @@ const Main = () => {
 	// 			} else {
 	// 				console.log('ishlamayabdi');
 	// 			}
-	// 		} 
+	// 		}
 	// 	});
 	// };
 	// function requestNotificationPermission() {
@@ -104,8 +105,7 @@ const Main = () => {
 						<p>{prayerTime?.date}</p>
 					</div>
 					<div className='city'>
-						<p> {prayerTime?.region}</p>
-						<p className='time'>{soat}</p>
+						<MdLocationOn color='' /> <p>{prayerTime?.region}</p>
 					</div>
 				</header>
 				<main>
