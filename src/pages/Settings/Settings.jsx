@@ -21,7 +21,7 @@ const Settings = () => {
 	var handleCount1 = () => {
 		if ('vibrate' in navigator) {
 			// Trigger the vibration for 200ms
-			navigator.vibrate(50);
+			navigator.vibrate(38);
 		} else {
 			console.log('Vibration not supported in this device.');
 		}
@@ -30,7 +30,7 @@ const Settings = () => {
 				duration: 8000,
 			});
 		}
-		if (counter == 32) {
+		if (counter == 31) {
 			if ('vibrate' in navigator) {
 				// Trigger the vibration for 200ms
 				navigator.vibrate(150);
