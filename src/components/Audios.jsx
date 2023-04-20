@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
+import play from '../assets/icons/play.svg';
 
-export const Audios = () => {
+export const Audios = ({ ayahnumber }) => {
 	const [audio, setAudio] = useState('');
 	const audioRef = useRef(null);
 
@@ -12,24 +13,19 @@ export const Audios = () => {
 	};
 
 	useEffect(() => {
-		getAudio(100);
+		getAudio(ayahnumber);
 	}, []);
 
 	const handleButtonClick = async () => {
-		console.log(audio);
-		const audioElement = audioRef.current;
-		await audioElement.addEventListener('canplay', () => {
-			audioElement.play();
-		});
+		audioRef.current.play();
 	};
 
 	return (
 		<div>
-			<h1>Пример воспроизведения звука</h1>
-			<button onClick={() => handleButtonClick()}>Воспроизвести</button>
-			<audio ref={audioRef}>
-				<source src={audio} type='audio/mpeg' />
-			</audio>
+			<button onClick={() => handleButtonClick()} className='bar__copy__button'>
+				<img src={play} alt='playbutton' width={'15px'} />
+			</button>
+			<audio ref={audioRef} src={audio} />
 		</div>
 	);
 };

@@ -14,6 +14,7 @@ import { VscChromeClose } from 'react-icons/vsc';
 import ReactModal from 'react-modal';
 import { Button } from '@mui/material';
 import { BiArrowBack } from 'react-icons/bi';
+import { Audios } from '../../components/Audios';
 
 export const Surah = () => {
 	const { number } = useParams();
@@ -67,7 +68,7 @@ export const Surah = () => {
 						<button className='back__button' onClick={() => navigate(-1)}>
 							<BiArrowBack color='#03AA77' size={'28px'} />
 						</button>
-						
+
 						<button
 							className='bar__copy__button'
 							onClick={() => handleLanguage()}>
@@ -108,13 +109,7 @@ export const Surah = () => {
 											alignItems: 'center',
 											justifyContent: 'space-between',
 										}}>
-										<button
-											className='bar__copy__button'
-											onClick={() => {
-												clipboardCopy(el.text);
-											}}>
-											<img src={play} alt='playbutton' width={'15px'} />
-										</button>
+										<Audios ayahnumber={el.number} />
 										<button
 											className='bar__copy__button'
 											onClick={() => {

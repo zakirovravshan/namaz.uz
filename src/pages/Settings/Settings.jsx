@@ -152,7 +152,6 @@ const Settings = () => {
 				Reset All
 				<img src={redo} alt='redo' width={'20px'} />
 			</button>
-
 			<Slider className='big_box' {...settings}>
 				<div className='box'>
 					<motion.div
