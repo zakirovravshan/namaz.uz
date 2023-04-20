@@ -5,6 +5,8 @@ import 'react-tabs/style/react-tabs.css';
 import { motion } from 'framer-motion';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import back from '../../assets/icons/back.svg';
+import { BiSearchAlt } from 'react-icons/bi';
+import {BiArrowBack} from 'react-icons/bi';
 
 export const Quran = () => {
 	const [randomNumber, setRandomNumber] = useState(
@@ -44,18 +46,28 @@ export const Quran = () => {
 	return (
 		<div className='quran'>
 			<div className='quran__wrapper'>
-				<button className='back__button' onClick={() => Navigate(-1)}>
-					<img src={back} alt='back button' />
-				</button>
+				<div className='surah_header'>
+					<button className='back__button' onClick={() => navigate(-1)}>
+						<BiArrowBack color='white' size={"28px"} />
+					</button>
+					<p style={{ color:"#fff" }} className='surah__title'>
+						Al-Quran
+					</p>
+					<button style={{ backgroundColor: 'transparent', border: 'none' }}>
+						<BiSearchAlt color='white' size={'28px'} />
+					</button>
+				</div>
 
 				<ul className='quran__list'>
 					<li className='quran__img'>
-						<div>
+						<div style={{ display: 'flex', marginBottom: '20px' }}>
 							<p className='surah__number'>{1}</p>
 							<p className='quran__img__title'>Al-Fatiha</p>
 						</div>
-						<p>Oxirgi marta o'qilgan</p>
-						<p>20 Apr 23</p>
+						<p className='text' style={{ marginBottom: '10px' }}>
+							Last Read
+						</p>
+						<p className='surah__rel'>20 Apr 2023</p>
 					</li>
 					{surah.length
 						? surah.map((el) => (

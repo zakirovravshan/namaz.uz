@@ -222,17 +222,21 @@ body {
 
 .quran__img {
     width: 98%;
-    height: 180px;
+    height: 170px;
     background-color: #fff;
     background-repeat: no-repeat;
     background-position: right bottom;
     border-radius: 40px;
-    padding: 30px;
+    padding: 20px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px 0px;
+    background-image: url("../../assets/images/quran4.png");
+    background-repeat: no-repeat;
+    background-size: 130px ;
+    background-position: right calc(60px) ;
 }
 
 .quran__img__title {
@@ -269,7 +273,7 @@ body {
 .quran__item {
     display: flex;
     align-items: center;
-    width: 100%;
+    width: 95%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -278,6 +282,7 @@ body {
     border-radius: 16px;
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 20px 0px;
+    margin: 0 auto;
 
 }
 

@@ -5,31 +5,33 @@
 .surah_header {
     display: flex;
     align-items: center;
-    margin-bottom: 24px;
+    width: 90%;
+    justify-content: space-between;
+    padding: 5px 10px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
 
 .surah__title {
     font-family: 'Poppins';
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 20px;
     line-height: 30px;
-    background: linear-gradient(107deg, rgb(13, 198, 180) 8.1%, rgb(33, 198, 138) 79.5%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-left: 20px;
+
 
 }
 
 .back__button {
-    position: absolute;
-    top: 15px;
-    left: 10px;
     background-color: transparent;
     border: none;
 }
 
 .surah__img {
+
     width: 327px;
     height: 230px;
     background-image: url("../../assets//images//quran2.svg"), linear-gradient(135deg, rgb(13, 198, 180) 8.1%, rgb(33, 198, 138) 79.5%);
@@ -40,6 +42,7 @@
     margin: 0 auto;
     display: flex;
     align-items: center;
+    margin-top: 40px;
     margin-bottom: 15px;
 }
 
@@ -90,6 +93,7 @@
 }
 
 .line {
+    width: 100%;
     display: block;
     color: #fff;
     border: 1px solid rgba(255, 255, 255, 0.76);

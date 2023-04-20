@@ -13,6 +13,7 @@ import { MdOutlineLanguage } from 'react-icons/md';
 import { VscChromeClose } from 'react-icons/vsc';
 import ReactModal from 'react-modal';
 import { Button } from '@mui/material';
+import { BiArrowBack } from 'react-icons/bi';
 
 export const Surah = () => {
 	const { number } = useParams();
@@ -64,12 +65,9 @@ export const Surah = () => {
 				<div>
 					<div className='surah_header'>
 						<button className='back__button' onClick={() => navigate(-1)}>
-							<img src={back} alt='back button' />
+							<BiArrowBack color='#03AA77' size={'28px'} />
 						</button>
-						<p style={{ marginRight: 'auto' }} className='surah__title'>
-							{surah.englishName}
-						</p>
-
+						
 						<button
 							className='bar__copy__button'
 							onClick={() => handleLanguage()}>
@@ -114,7 +112,6 @@ export const Surah = () => {
 											className='bar__copy__button'
 											onClick={() => {
 												clipboardCopy(el.text);
-												
 											}}>
 											<img src={play} alt='playbutton' width={'15px'} />
 										</button>
