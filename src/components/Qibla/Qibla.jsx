@@ -1,15 +1,10 @@
-
+import { useEffect, useState } from 'react';
+import { Theme } from '../Theme/Theme';
 
 export const Qibla = () => {
-
 	return (
 		<div>
-			<a
-				href='https://qiblafinder.withgoogle.com/intl/en/onboarding'
-				target='blank'>
-				{' '}
-				Qiblani Aniqlash uchun tugamni bosing
-			</a>
+			<Theme />
 		</div>
 	);
 };

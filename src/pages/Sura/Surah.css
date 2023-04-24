@@ -15,7 +15,6 @@
     right: 0;
     margin: 0 auto;
     position: fixed;
-    /* From https://css.glass */
     background: rgba(184, 182, 182, 0.178);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -43,7 +42,7 @@
 
     width: 327px;
     height: 230px;
-    background-image: url("../../assets//images//quran2.svg"), linear-gradient(135deg, rgb(13, 198, 180) 8.1%, rgb(33, 198, 138) 79.5%);
+    background-image: url("../../assets//images//quran2.svg"), linear-gradient(135deg, rgb(13, 198, 180) 8.1%, #21c68a 79.5%);
     background-repeat: no-repeat;
     background-position: right bottom;
     border-radius: 16px;
@@ -53,6 +52,7 @@
     align-items: center;
     margin-top: 40px;
     margin-bottom: 15px;
+    box-shadow: #21c68966 0px 10px 20px 0px;
 }
 
 .surah__img__content {
